@@ -1,0 +1,52 @@
+/* ══════════════════════════════════════════
+   AGRIROVER — Theme Variables
+   Light = Excome palette | Dark = RoutinMe palette
+   ══════════════════════════════════════════ */
+
+:root {
+  /* Light mode (Excome-inspired) */
+  --accent:        #6aab7e;
+  --accent-light:  rgba(106,171,126,0.10);
+  --accent-mid:    rgba(106,171,126,0.25);
+  --accent-dark:   #4a7c59;
+  --bg:            #e8f5ec;
+  --bg2:           #d4edda;
+  --bg3:           #c0e0c8;
+  --surface:       rgba(255,255,255,0.72);
+  --surface-hover: rgba(255,255,255,0.90);
+  --ink:           #2c3e30;
+  --ink2:          #4a5e4f;
+  --muted:         #7a9a82;
+  --border:        rgba(74,124,89,0.15);
+  --sidebar-bg:    rgba(232,245,236,0.96);
+  --sidebar-w:     260px;
+  --topbar-h:      0px;
+  --radius:        12px;
+  --radius-sm:     8px;
+  --transition:    0.3s ease;
+  --font-display:  'Space Grotesk', sans-serif;
+  --font-body:     'Inter', sans-serif;
+  --font-mono:     'JetBrains Mono', monospace;
+
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  /* Dark mode (RoutinMe-inspired) */
+  --accent:        #00D4A0;
+  --accent-light:  rgba(0,212,160,0.08);
+  --accent-mid:    rgba(0,212,160,0.20);
+  --accent-dark:   #00b389;
+  --bg:            #0D1117;
+  --bg2:           #161B22;
+  --bg3:           #21262D;
+  --surface:       rgba(22,27,34,0.90);
+  --surface-hover: rgba(33,38,45,0.95);
+  --ink:           #e2f0ea;
+  --ink2:          #a8c8b8;
+  --muted:         #5a7a6e;
+  --border:        rgba(0,212,160,0.12);
+  --sidebar-bg:    rgba(13,17,23,0.97);
+
+  color-scheme: dark;
+}
