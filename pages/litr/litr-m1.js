@@ -18,7 +18,7 @@
 var LITR_M1_REVIEWER = {
   name:     "Md Muntasir Rahman Rafin",
   pic:      "assets/images/members/muntasir.jpg",
-  role:     "Team Lead · AI & Software",
+  role:     "Team Lead · AI & Software,Project Management, Hardware ",
   subtitle: "Literature review on YOLO-based weed detection, transformer architectures, and precision agriculture AI systems.",
   summary:  "Focused on state-of-the-art object detection models for real-time weed and pest identification, evaluating accuracy, speed, and suitability for embedded rover deployment in agricultural environments.",
 };
