@@ -15,7 +15,7 @@
 /* ════════════════════════════════════════════════════════════
    YOUR REVIEWER INFO — fill this in once
    ════════════════════════════════════════════════════════════ */
-var LITR_MX_REVIEWER = {
+var LITR_M3_REVIEWER = {
     name:     "Maria Jahan Noon",
   pic:      "assets/images/members/noon.jpg",
   role:     "AI & Computer Vision Engineer (Software)",       /* Your project role       e.g. "Hardware & Embedded Systems"   */
@@ -37,7 +37,7 @@ var MEMBER3 = {
 /* ════════════════════════════════════════════════════════════
    YOUR PAPERS — copy the block below once per paper
    ════════════════════════════════════════════════════════════ */
-var LITR_MX_PAPERS = [
+var LITR_M3_PAPERS = [
 
   /* ┌─────────────────────────────────────────────────────────┐
      │  PAPER TEMPLATE — copy from here                        │
@@ -226,5 +226,5 @@ var LITR_MX_PAPERS = [
    Member 3 → 'page-lit-m3'   ... and so on
    ════════════════════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', function () {
-  renderLitrPage('page-lit-m3', LITR_MX_REVIEWER, LITR_MX_PAPERS);
+  renderLitrPage('page-lit-m3', LITR_M3_REVIEWER, LITR_M3_PAPERS);
 });
