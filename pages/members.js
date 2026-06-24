@@ -32,8 +32,9 @@ var SUPERVISOR = {
    ════════════════════════════════════════════════════════════ */
 var MEMBER1 = {
   name:     "Md Muntasir Rahman Rafin",
+  id:      "2222397",
   pic:      "assets/images/members/muntasir.jpg",
-  role:     "Team Lead · AI & Software",
+  role:     "Team Lead · AI & Software · Project Management · Hardware",
   quote:    "Building the future of farming, one line of code at a time.",
   github:   "https://github.com/elmuntasir",
   fb:       "https://www.facebook.com/mun.rafin/",
@@ -59,13 +60,13 @@ var MEMBER2 = {
    ██  MEMBER 3
    ════════════════════════════════════════════════════════════ */
 var MEMBER3 = {
-  name:     "Member 3 Name",
-  pic:      "assets/images/members/moba.jpg",
-  role:     "Role / Responsibility",
-  quote:    "Your quote here.",
-  github:   "",
+  name:     "Maria Jahan Noon",
+  pic:      "assets/images/members/noon.jpg",
+  role:     "AI & Computer Vision Engineer (Software)",
+  quote:    "Transforming data into decisions, and innovation into sustainable harvests.",
+  github:   "https://github.com/Maria-Jahan-Noon?tab=repositories",
   fb:       "",
-  linkedin: "",
+  linkedin: "https://www.linkedin.com/in/maria-jahan-noon-1245b23bb/",
   rg:       "",
 };
 
