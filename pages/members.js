@@ -49,9 +49,9 @@ var MEMBER2 = {
   pic:      "assets/images/members/toa.jpg",
   role:     "Hardware & Embedded Systems",
   quote:    "Every circuit is a conversation between power and precision.",
-  github:   "",
-  fb:       "",
-  linkedin: "",
+  github:   "https://github.com/tahura98",
+  ID:       "2230230",
+  linkedin: "https://www.linkedin.com/in/tahura-anzum-toa-33194826a/",
   rg:       "",
 };
 
@@ -60,7 +60,7 @@ var MEMBER2 = {
    ════════════════════════════════════════════════════════════ */
 var MEMBER3 = {
   name:     "Member 3 Name",
-  pic:      "assets/images/members/m3.jpg",
+  pic:      "assets/images/members/moba.jpg",
   role:     "Role / Responsibility",
   quote:    "Your quote here.",
   github:   "",

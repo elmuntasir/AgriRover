@@ -1,0 +1,291 @@
+/* ══════════════════════════════════════════
+   AGRIROVER — Literature Review Template
+   pages/litr/litr.css
+   Shared by all 5 member lit review pages
+   ══════════════════════════════════════════ */
+
+/* ── Reviewer header card ── */
+.litr-reviewer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  margin-bottom: 32px;
+}
+
+.litr-reviewer-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid var(--accent-mid);
+  flex-shrink: 0;
+}
+
+.litr-reviewer-fallback {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--bg2);
+  border: 2px solid var(--accent-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.litr-reviewer-info { flex: 1; }
+
+.litr-reviewer-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+
+.litr-reviewer-role {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.litr-reviewer-summary {
+  font-size: 0.82rem;
+  color: var(--ink2);
+  line-height: 1.5;
+}
+
+.litr-paper-count {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--muted);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.litr-paper-count strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+/* ── Paper cards ── */
+.litr-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.litr-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  transition: border-color var(--transition), transform 0.2s ease;
+  position: relative;
+}
+
+.litr-card:hover {
+  border-color: var(--accent-mid);
+  transform: translateY(-1px);
+}
+
+/* Accent bar on left */
+.litr-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 16px; bottom: 16px;
+  width: 3px;
+  background: var(--accent);
+  border-radius: 0 2px 2px 0;
+  opacity: 0.6;
+  transition: opacity var(--transition);
+}
+
+.litr-card:hover::before { opacity: 1; }
+
+/* Paper number badge */
+.litr-card-num {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.litr-card-num::before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 1px;
+  background: var(--muted);
+}
+
+/* Paper title */
+.litr-card-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+/* Authors + journal row */
+.litr-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.litr-meta-authors {
+  font-size: 0.8rem;
+  color: var(--ink2);
+  flex: 1;
+  min-width: 0;
+}
+
+.litr-meta-year {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--accent);
+  background: var(--accent-light);
+  border: 1px solid var(--accent-mid);
+  border-radius: 4px;
+  padding: 2px 8px;
+  flex-shrink: 0;
+}
+
+.litr-meta-journal {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-style: italic;
+  width: 100%;
+}
+
+/* Abstract / summary */
+.litr-card-abstract {
+  font-size: 0.86rem;
+  color: var(--ink2);
+  line-height: 1.72;
+  margin-bottom: 14px;
+}
+
+/* Key findings */
+.litr-findings {
+  margin-bottom: 14px;
+}
+
+.litr-findings-label {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.litr-findings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.litr-finding-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--ink2);
+  line-height: 1.5;
+}
+
+.litr-finding-item::before {
+  content: '→';
+  color: var(--accent);
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  margin-top: 1px;
+}
+
+/* Tags + DOI row */
+.litr-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.litr-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.litr-tag {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--ink2);
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+
+.litr-doi {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--accent-mid);
+  transition: border-color var(--transition);
+  flex-shrink: 0;
+}
+
+.litr-doi:hover { border-bottom-color: var(--accent); }
+
+/* ── Empty state ── */
+.litr-empty {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.litr-empty svg {
+  width: 36px;
+  height: 36px;
+  opacity: 0.3;
+  margin: 0 auto 12px;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .litr-reviewer { flex-wrap: wrap; }
+  .litr-paper-count { text-align: left; }
+  .litr-card { padding: 18px 20px; }
+}
