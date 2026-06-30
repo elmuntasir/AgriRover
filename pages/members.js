@@ -73,31 +73,32 @@ var MEMBER3 = {
 /* ════════════════════════════════════════════════════════════
    ██  MEMBER 4
    ════════════════════════════════════════════════════════════ */
+
 var MEMBER4 = {
-  name:     "Member 4 Name",
-  pic:      "assets/images/members/m4.jpg",
-  role:     "Role / Responsibility",
+  name:     "Mobasshira Akter",
+  pic:      "assets/images/members/muba.jpg",
+  role:     "",
   quote:    "Your quote here.",
-  github:   "",
-  fb:       "",
-  linkedin: "",
-  rg:       "",
+  github:   "https://github.com/mobasshira13",
+  fb:       "https://www.facebook.com/share/1B8BC1qPx5/",
+  linkedin: "https://www.linkedin.com/in/mobasshira-akter-7383b340b?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+  rg:       "2210766",
 };
 
 /* ════════════════════════════════════════════════════════════
    ██  MEMBER 5
    ════════════════════════════════════════════════════════════ */
+
 var MEMBER5 = {
-  name:     "Member 5 Name",
-  pic:      "assets/images/members/m5.jpg",
-  role:     "Role / Responsibility",
-  quote:    "Your quote here.",
-  github:   "",
-  fb:       "",
+  name:     "Sumaiya Nasrin",
+  pic:      "assets/images/members/suma.jpg",
+  role:     "Software",
+  quote:    "Great software is built through teamwork, creativity, and continuous learning.",
+  github:   "https://github.com/tabassumhmm",
+  fb:       "https://www.facebook.com/share/1Vnxkid3Ky/?mibextid=wwXIfr",
   linkedin: "",
   rg:       "",
 };
-
 /* ════════════════════════════════════════════════════════════
    RENDER ENGINE — no need to edit below this line
    ════════════════════════════════════════════════════════════ */
