@@ -490,7 +490,6 @@ ul{list-style:none}
           </a>
           <ul class="sub-nav">
             <li><a class="sub-nav-link" data-page="hw-components" href="#hw-components">Component List</a></li>
-            <li><a class="sub-nav-link" data-page="hw-cost" href="#hw-cost">Component Cost</a></li>
             <li><a class="sub-nav-link" data-page="hw-block" href="#hw-block">Block Diagram</a></li>
           </ul>
         </li>
@@ -603,8 +602,7 @@ ul{list-style:none}
     <section class="page" id="page-sw-overview"><div class="page-header"><div class="page-eyebrow">Software</div><h1 class="page-title">Software Overview</h1></div><div class="abstract-box">Content coming soon.</div></section>
     <section class="page" id="page-sw-ai"><div class="page-header"><div class="page-eyebrow">Software</div><h1 class="page-title">AI Model</h1><p class="page-subtitle">YOLOv8 training, dataset, and detection pipeline.</p></div><div class="abstract-box">Content coming soon.</div></section>
     <section class="page" id="page-sw-dashboard"><div class="page-header"><div class="page-eyebrow">Software</div><h1 class="page-title">Control Dashboard</h1></div><div class="abstract-box">Content coming soon.</div></section>
-    <section class="page" id="page-hw-components"><div class="page-header"><div class="page-eyebrow">Hardware</div><h1 class="page-title">Component List</h1></div><div class="abstract-box">Content coming soon.</div></section>
-    <section class="page" id="page-hw-cost"><div class="page-header"><div class="page-eyebrow">Hardware</div><h1 class="page-title">Component Cost</h1></div><div class="abstract-box">Content coming soon.</div></section>
+    <section class="page" id="page-hw-components"></section>
     <section class="page" id="page-hw-block"><div class="page-header"><div class="page-eyebrow">Hardware</div><h1 class="page-title">Block Diagram</h1></div><div class="abstract-box">Content coming soon.</div></section>
     <section class="page" id="page-timeline"><div class="page-header"><div class="page-eyebrow">Others</div><h1 class="page-title">Lecture Timeline</h1></div><div class="abstract-box">Content coming soon.</div></section>
     <section class="page" id="page-robotics"><div class="page-header"><div class="page-eyebrow">Others</div><h1 class="page-title">Robotics</h1></div><div class="abstract-box">Content coming soon.</div></section>
@@ -632,6 +630,7 @@ ul{list-style:none}
 <script src="pages/project.js"></script>
 <link rel="stylesheet" href="pages/build.css">
 <link rel="stylesheet" href="pages/litr/litr.css">
+<link rel="stylesheet" href="components/components.css">
 <script src="pages/build.js"></script>
 <script src="pages/others.js"></script>
 <script src="pages/litr/litr.js"></script>
@@ -640,6 +639,23 @@ ul{list-style:none}
 <script src="pages/litr/litr-m3.js"></script>
 <script src="pages/litr/litr-m4.js"></script>
 <script src="pages/litr/litr-m5.js"></script>
+<script src="components/components-render.js"></script>
+<script src="components/component-template.js"></script>
+<script>
+(function(){
+  function renderHardwareCatalog(){
+    if (typeof renderComponentsPage === 'function' && typeof COMPONENTS !== 'undefined') {
+      renderComponentsPage('page-hw-components', COMPONENTS);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderHardwareCatalog);
+  } else {
+    renderHardwareCatalog();
+  }
+})();
+</script>
 
 <script>
 (function(){

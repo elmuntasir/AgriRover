@@ -451,9 +451,13 @@
     buildSwOverview();
     buildSwAI();
     buildSwDashboard();
-    buildHwComponents();
-    buildHwCost();
-    buildHwBlock();
+    // Hardware pages are now sourced from the components/ folder when available.
+    // If COMPONENTS is not present (older deployments), fall back to the hard-coded builders.
+    if (typeof COMPONENTS === 'undefined') {
+      buildHwComponents();
+      buildHwCost();
+      buildHwBlock();
+    }
   });
 
 })();

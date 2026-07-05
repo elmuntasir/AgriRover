@@ -1,0 +1,196 @@
+/* ══════════════════════════════════════════
+   AGRIROVER — Component List Styles
+   components/components.css
+   ══════════════════════════════════════════ */
+
+.comp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── Card ── */
+.comp-card {
+  display: flex;
+  gap: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  transition: border-color var(--transition), transform 0.2s ease;
+}
+
+.comp-card:hover {
+  border-color: var(--accent-mid);
+  transform: translateY(-1px);
+}
+
+/* ── Photo ── */
+.comp-img-wrap {
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+}
+
+.comp-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.comp-img-wrap-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+}
+
+.comp-img-wrap-empty svg {
+  width: 34px;
+  height: 34px;
+  opacity: 0.5;
+}
+
+/* ── Info ── */
+.comp-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comp-info-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.comp-name {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+.comp-model {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+
+.comp-price-badge {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1px;
+  font-family: var(--font-mono);
+  color: var(--accent-dark);
+  background: var(--accent-light);
+  border: 1px solid var(--accent-mid);
+  border-radius: 12px;
+  padding: 5px 12px;
+  white-space: nowrap;
+}
+
+.comp-price-total {
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.comp-price-breakdown {
+  font-size: 0.6rem;
+  opacity: 0.75;
+}
+
+.comp-qty-tag {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.comp-row {
+  line-height: 1.5;
+}
+
+.comp-label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.comp-text {
+  font-size: 0.86rem;
+  color: var(--ink2);
+}
+
+/* ── Empty state ── */
+.comp-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 48px 20px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+.comp-empty svg {
+  width: 32px;
+  height: 32px;
+  opacity: 0.5;
+}
+
+/* ── Total ── */
+.comp-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding: 14px 20px;
+  background: var(--accent-light);
+  border: 1px solid var(--accent-mid);
+  border-radius: var(--radius-sm);
+}
+
+.comp-total-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink2);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.comp-total-value {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+}
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .comp-card {
+    flex-direction: column;
+  }
+
+  .comp-img-wrap {
+    width: 100%;
+    height: 180px;
+  }
+}
