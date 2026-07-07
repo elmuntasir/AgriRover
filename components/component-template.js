@@ -55,7 +55,7 @@ var COMPONENTS = [
   {
     name: "ESP32-CAM",
     model: "AI-Thinker ESP32-CAM (OV2640)",
-    pic: "components/pic/esp32-cam.jpg",
+    pic: "components/pic/ESP32-CAM.jpg",
     qty: 1,
     unitPrice: "550",
     function: "ESP32 module with a built-in OV2640 2MP camera and Wi-Fi. Captures a photo on command and can upload it over HTTP/Wi-Fi.",
@@ -111,7 +111,7 @@ var COMPONENTS = [
   {
     name: "MQ-4 Methane Gas Sensor",
     model: "MQ-4",
-    pic: "components/pic/mq4-gas-sensor.jpg",
+    pic: "components/pic/MQ-4 Methane Gas Sensor.jpg",
     qty: 1,
     unitPrice: "220",
     function: "Analog gas sensor tuned for methane (CH₄) and natural gas concentration, outputs a variable voltage proportional to gas level.",
