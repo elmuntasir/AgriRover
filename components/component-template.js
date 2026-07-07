@@ -64,7 +64,7 @@ var COMPONENTS = [
   {
     name: "ESP32-WROOM-32 Dev Board",
     model: "ESP32-WROOM-32",
-    pic: "components/pic/esp32-devboard.jpg",
+    pic:       "components/pic/ESP32-WROOM-32 Dev Board.jpg",
     qty: 1,
     unitPrice: "550",
     function: "Dual-core 240MHz microcontroller with Wi-Fi/Bluetooth and enough GPIO to drive motors, read sensors, and control actuators simultaneously.",
@@ -73,7 +73,7 @@ var COMPONENTS = [
   {
     name: "CP2102 USB-to-TTL Programmer",
     model: "CP2102",
-    pic: "components/pic/cp2102-programmer.jpg",
+    pic:       "components/pic/CP2102 USB-to-TTL Programmer__CP2102.jpg",
     qty: 1,
     unitPrice: "150",
     function: "USB-to-serial adapter used to flash firmware onto the ESP32-CAM, which has no onboard USB port.",
@@ -84,7 +84,7 @@ var COMPONENTS = [
   {
     name: "NEO-6M GPS Module",
     model: "NEO-6M",
-    pic: "components/pic/neo6m-gps.jpg",
+    pic: "components/pic/NEO-6M GPS Module__.jpg",
     qty: 1,
     unitPrice: "550",
     function: "UART GPS receiver with 1Hz update rate and roughly ±2.5m accuracy (CEP).",
@@ -93,7 +93,7 @@ var COMPONENTS = [
   {
     name: "HC-SR04 Ultrasonic Sensor",
     model: "HC-SR04",
-    pic: "components/pic/hc-sr04.jpg",
+    pic:       "components/pic/HC-SR04 Ultrasonic Sensor__.webp",
     qty: 2,
     unitPrice: "80",
     function: "Ultrasonic distance sensor, 2–400cm range, 15° beam angle. One unit is mounted on the pan servo for plant-height scanning; the other is fixed front-facing for obstacle detection.",
@@ -102,7 +102,7 @@ var COMPONENTS = [
   {
     name: "SG90 Micro Servo",
     model: "SG90",
-    pic: "components/pic/sg90-servo.jpg",
+    pic:       "components/pic/SG90 Micro Servo.jpg",
     qty: 1,
     unitPrice: "150",
     function: "9g micro servo, roughly 180° sweep, PWM controlled.",
@@ -120,7 +120,7 @@ var COMPONENTS = [
   {
     name: "Capacitive Soil Moisture Sensor",
     model: "Capacitive V1.2",
-    pic: "components/pic/soil-moisture-sensor.jpg",
+    pic: "components/pic/Capacitive Soil Moisture Sensor V1.2.jpg",
     qty: 1,
     unitPrice: "130",
     function: "Corrosion-resistant capacitive sensor that outputs an analog voltage proportional to soil water content.",
@@ -131,7 +131,7 @@ var COMPONENTS = [
   {
     name: "L298N Motor Driver",
     model: "L298N",
-    pic: "components/pic/l298n-driver.jpg",
+    pic: "components/pic/L298N Motor Driver.jpg",
     qty: 1,
     unitPrice: "120",
     function: "Dual H-bridge motor driver module rated for 2A continuous current per channel.",
@@ -140,7 +140,7 @@ var COMPONENTS = [
   {
     name: "12V DC Gear Motor",
     model: "150 RPM Gear Motor",
-    pic: "components/pic/dc-gear-motor.jpg",
+    pic: "components/pic/12V DC Gear Motor.jpg",
     qty: 4,
     unitPrice: "280",
     function: "150 RPM, ~1.5 kg·cm torque gear motor with an encoder-ready shaft.",
@@ -149,7 +149,7 @@ var COMPONENTS = [
   {
     name: "4WD Robot Chassis Kit",
     model: "Aluminium 4WD Chassis, 300×220mm",
-    pic: "components/pic/4wd-chassis.jpg",
+    pic: "components/pic/4WD Robot Chassis Kit__ Aluminium 4WD Chassis, 300×220mm.webp",
     qty: 1,
     unitPrice: "1200",
     function: "Aluminium alloy chassis with mounting points for 4 motors, wheels, and an electronics deck.",
@@ -160,7 +160,7 @@ var COMPONENTS = [
   {
     name: "11.1V 3S LiPo Battery",
     model: "2200mAh 25C, XT60",
-    pic: "components/pic/lipo-battery.jpg",
+    pic: "components/pic/11.1V 3S LiPo Battery__2200mAh 25C, XT60.jpg",
     qty: 1,
     unitPrice: "900",
     function: "3-cell LiPo battery, 2200 mAh capacity, 25C discharge rating.",
@@ -169,7 +169,7 @@ var COMPONENTS = [
   {
     name: "LiPo Balance Charger",
     model: "B3 Compact Charger",
-    pic: "components/pic/lipo-charger.jpg",
+    pic: "components/pic/LiPo Balance Charger__B3 Compact Charger.jpg",
     qty: 1,
     unitPrice: "350",
     function: "Balance charger for 2S/3S LiPo packs, keeps individual cell voltages even while charging.",
@@ -178,7 +178,7 @@ var COMPONENTS = [
   {
     name: "LM2596 Buck Converter",
     model: "LM2596 Step-Down",
-    pic: "components/pic/lm2596-buck-converter.jpg",
+    pic: "components/pic/LM2596 Buck Converter__LM2596 Step-Down.jpg",
     qty: 2,
     unitPrice: "80",
     function: "Adjustable step-down (buck) converter, steps 12V battery voltage down to 5V.",
@@ -189,7 +189,7 @@ var COMPONENTS = [
   {
     name: "MAX98357A I2S Amplifier",
     model: "MAX98357A",
-    pic: "components/pic/max98357a-amp.jpg",
+    pic: "components/pic/MAX98357A I2S Amplifier__.jpg",
     qty: 1,
     unitPrice: "200",
     function: "I2S digital-input Class-D amplifier — takes a digital audio stream straight from the ESP32's I2S peripheral and drives a speaker directly, no separate DAC needed.",
@@ -198,7 +198,7 @@ var COMPONENTS = [
   {
     name: "Speaker 3W 4Ω",
     model: "3W 4Ω Mini Speaker",
-    pic: "components/pic/speaker-3w.jpg",
+    pic: "components/pic/Mini Speaker 3W 4Ω.jpg",
     qty: 1,
     unitPrice: "100",
     function: "Small 3W speaker, driven directly by the MAX98357A's onboard Class-D amplifier.",
@@ -209,7 +209,7 @@ var COMPONENTS = [
   {
     name: "Peristaltic Pump",
     model: "12V, 100 mL/min",
-    pic: "components/pic/peristaltic-pump.jpg",
+    pic: "components/pic/Peristaltic pump__12V,100 mL--min.jpg",
     qty: 1,
     unitPrice: "480",
     function: "12V pump with chemical-resistant tubing, moves liquid at roughly 100 mL/min.",
@@ -218,7 +218,7 @@ var COMPONENTS = [
   {
     name: "Spray Nozzle",
     model: "Flat Fan, 80°",
-    pic: "components/pic/spray-nozzle.jpg",
+    pic: "components/pic/Spray Nozzle__Flat Fan, 80°.jpg",
     qty: 1,
     unitPrice: "120",
     function: "Flat fan spray nozzle with an 80° spray angle, 1/4\" fitting.",
@@ -227,7 +227,7 @@ var COMPONENTS = [
   {
     name: "2-Channel Relay Module",
     model: "5V, 10A/250VAC",
-    pic: "components/pic/relay-module.jpg",
+    pic: "components/pic/2-Channel Relay Module__5V, 10A,250VAC.jpg",
     qty: 1,
     unitPrice: "100",
     function: "5V-logic relay board that switches the 12V pump circuit on/off under microcontroller control.",
@@ -238,7 +238,7 @@ var COMPONENTS = [
   {
     name: "Wires, Headers & Prototyping Kit",
     model: "Assorted Male/Female Jumpers",
-    pic: "components/pic/wires-headers.jpg",
+    pic: "components/pic/Wires, Headers & Prototyping Kit__Assorted Male-Female Jumpers.jpg",
     qty: 1,
     unitPrice: "150",
     function: "Assorted jumper wires and pin headers of various lengths.",
@@ -247,7 +247,7 @@ var COMPONENTS = [
   {
     name: "Custom PCB / Perfboard",
     model: "Perfboard, general purpose",
-    pic: "components/pic/perfboard.jpg",
+    pic: "components/pic/Custom PCB,Perfboard__general purpose.jpg",
     qty: 1,
     unitPrice: "150",
     function: "General-purpose prototyping board for soldering a clean, vibration-resistant wiring layout.",
