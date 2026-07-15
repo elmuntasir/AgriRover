@@ -832,7 +832,49 @@ ul{list-style:none}
     <section class="page" id="page-results"><div class="page-header"><div class="page-eyebrow">Project</div><h1 class="page-title">Results</h1></div><div class="abstract-box">Content coming soon.</div></section>
     <section class="page" id="page-future"><div class="page-header"><div class="page-eyebrow">Project</div><h1 class="page-title">Future Work</h1></div><div class="abstract-box">Content coming soon.</div></section>
     <section class="page" id="page-weekly"><div class="page-header"><div class="page-eyebrow">Project</div><h1 class="page-title">Weekly Updates</h1></div><div class="abstract-box">Content coming soon.</div></section>
-    <section class="page" id="page-pt-bengali"><div class="page-header"><div class="page-eyebrow">Progress Timeline</div><h1 class="page-title">Bengali Language Support and Image Processing</h1></div><div class="abstract-box">Content coming soon.</div></section>
+    <section class="page" id="page-pt-bengali">
+      <div class="page-header">
+        <div class="page-eyebrow">Progress Timeline</div>
+        <h1 class="page-title">Bengali Language Support and Image Processing</h1>
+      </div>
+      
+      <div class="section-block">
+        <h2 class="section-heading">Trial 1 Report</h2>
+        <div class="timeline-grid">
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <div class="timeline-title">Initial Trial & Bug Detection</div>
+              <div class="timeline-badge badge-completed">Completed</div>
+            </div>
+            
+            <div class="timeline-desc">
+              <p>During the first trial, we focused on evaluating the AI's capabilities in image processing for bug detection, as well as testing its Bengali language support for farmer accessibility.</p>
+              
+              <h3 style="margin-top: 15px; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink);">Image Processing Verdict: <span style="color: #d97706;">Partial Success</span></h3>
+              <p>While the AI successfully detected the presence of insects, it misclassified Japanese beetles as aphids. This inaccuracy stems from the training dataset, as aphids and Japanese beetles share similar visual characteristics in low-resolution conditions.</p>
+              
+              <h3 style="margin-top: 15px; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink);">Bengali Language Support Verdict: <span style="color: #d97706;">Needs Improvement</span></h3>
+              <p>While the overall detection and explanation logic functioned correctly, the Bengali language output experienced significant latency. The AI took an excessive amount of time to process user speech. Additionally, the generated voice sounded unnatural and closely resembled broken Bengali, which hinders the intuitive experience intended for end-users.</p>
+
+              <h3 style="margin-top: 15px; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink);">Future Work &amp; Improvements</h3>
+              <p>Moving forward, we will fine-tune the YOLOv8 model on a more diverse, high-resolution dataset to improve accuracy in distinguishing visually similar pests. For the language module, we plan to optimize the audio processing pipeline to reduce latency and integrate a more natural-sounding Bengali text-to-speech engine.</p>
+
+              <h3 style="margin-top: 15px; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink);">Overall Assessment</h3>
+              <p>The trial proved that our foundational architecture—combining vision and voice explanation—is viable. However, targeted refinements in both classification accuracy and conversational AI response times are required for a production-ready farmer-facing system.</p>
+            </div>
+            
+            <div style="margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              <div>
+                <img src="assets/images/progress_timeline/bug1.jpg" alt="Bug Detection Test" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+              </div>
+              <div style="aspect-ratio: 16/9;">
+                <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/o-_XqtzCCuE?rel=0" title="Trial 1 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: var(--radius-sm); border: 1px solid var(--border);"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     
 
 
