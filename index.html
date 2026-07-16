@@ -564,13 +564,20 @@ ul{list-style:none}
             <svg class="nav-chevron"><use href="#icon-chevron"/></svg>
           </a>
           <ul class="sub-nav">
-            <li><a class="sub-nav-link" data-page="pt-bengali" href="#pt-bengali">Bengali Language Support and Image Processing</a></li>
+            <li><a class="sub-nav-link" data-page="pt-bengali" href="#pt-bengali">Bengali Language Support</a></li>
+            <li><a class="sub-nav-link" data-page="pt-image-processing" href="#pt-image-processing">Image Processing</a></li>
           </ul>
         </li>
       </ul>
 
       <span class="nav-section-label">Research</span>
       <ul>
+        <li class="nav-item">
+          <a class="nav-link" data-page="research-questions" href="#research-questions">
+            <svg class="nav-icon"><use href="#icon-target"/></svg>
+            <span class="nav-label">Research Questions</span>
+          </a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" data-toggle="litreview" href="#">
             <svg class="nav-icon"><use href="#icon-book"/></svg>
@@ -615,7 +622,7 @@ ul{list-style:none}
           </a>
           <ul class="sub-nav">
             <li><a class="sub-nav-link" data-page="hw-components" href="#hw-components">Component List</a></li>
-            <li><a class="sub-nav-link" data-page="hw-block" href="#hw-block">Block Diagram</a></li>
+            <li><a class="sub-nav-link" data-page="hw-diagrams" href="#hw-diagrams">Sketch and Diagrams</a></li>
           </ul>
         </li>
       </ul>
@@ -835,48 +842,179 @@ ul{list-style:none}
     <section class="page" id="page-pt-bengali">
       <div class="page-header">
         <div class="page-eyebrow">Progress Timeline</div>
-        <h1 class="page-title">Bengali Language Support and Image Processing</h1>
+        <h1 class="page-title">Bengali Language Support</h1>
       </div>
       
       <div class="section-block">
-        <h2 class="section-heading">Trial 1 Report</h2>
+        <h2 class="section-heading">Phase Overview</h2>
         <div class="timeline-grid">
+          
           <div class="timeline-card">
             <div class="timeline-card-header">
-              <div class="timeline-title">Initial Trial & Bug Detection</div>
-              <div class="timeline-badge badge-completed">Completed</div>
+              <div class="timeline-title">Introduction</div>
             </div>
-            
-            <div class="timeline-desc">
-              <p>During the first trial, we focused on evaluating the AI's capabilities in image processing for bug detection, as well as testing its Bengali language support for farmer accessibility.</p>
-              
-              <h3 style="margin-top: 15px; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink);">Image Processing Verdict: <span style="color: #d97706;">Partial Success</span></h3>
-              <p>While the AI successfully detected the presence of insects, it misclassified Japanese beetles as aphids. This inaccuracy stems from the training dataset, as aphids and Japanese beetles share similar visual characteristics in low-resolution conditions.</p>
-              
-              <h3 style="margin-top: 15px; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink);">Bengali Language Support Verdict: <span style="color: #d97706;">Needs Improvement</span></h3>
-              <p>While the overall detection and explanation logic functioned correctly, the Bengali language output experienced significant latency. The AI took an excessive amount of time to process user speech. Additionally, the generated voice sounded unnatural and closely resembled broken Bengali, which hinders the intuitive experience intended for end-users.</p>
-
-              <h3 style="margin-top: 15px; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink);">Future Work &amp; Improvements</h3>
-              <p>Moving forward, we will fine-tune the YOLOv8 model on a more diverse, high-resolution dataset to improve accuracy in distinguishing visually similar pests. For the language module, we plan to optimize the audio processing pipeline to reduce latency and integrate a more natural-sounding Bengali text-to-speech engine.</p>
-
-              <h3 style="margin-top: 15px; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink);">Overall Assessment</h3>
-              <p>The trial proved that our foundational architecture—combining vision and voice explanation—is viable. However, targeted refinements in both classification accuracy and conversational AI response times are required for a production-ready farmer-facing system.</p>
-            </div>
-            
-            <div style="margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div style="margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center;">
               <div>
-                <img src="assets/images/progress_timeline/bug1.jpg" alt="Bug Detection Test" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                <img src="assets/images/progress_timeline/bangla1.png" alt="Bengali Language Support" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);">
               </div>
-              <div style="aspect-ratio: 16/9;">
-                <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/o-_XqtzCCuE?rel=0" title="Trial 1 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: var(--radius-sm); border: 1px solid var(--border);"></iframe>
+              <div class="timeline-desc">
+                <p>Native language support is crucial for farmers in Bangladesh. By incorporating Bengali language speaking capabilities, AgriRover becomes much more accessible. This allows farmers to interact naturally with the system, receive real-time explanations, and understand crop conditions without needing technical expertise or English proficiency.</p>
               </div>
             </div>
           </div>
+          
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <div class="timeline-title">Phase 1: Conversational AI in Bengali</div>
+              <div class="timeline-badge badge-completed">Completed</div>
+            </div>
+            <div class="timeline-desc">
+              <p>Phase one focuses on the AI model's capability to have a natural conversation in the Bengali language. This foundational phase ensures the language models, translation, and text-to-speech engines can reliably process and generate Bengali speech.</p>
+            </div>
+            <div style="margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              <div style="aspect-ratio: 16/9; position: relative;">
+                <a href="https://www.youtube.com/watch?v=o-_XqtzCCuE" target="_blank" style="display: block; width: 100%; height: 100%;">
+                  <img src="https://img.youtube.com/vi/o-_XqtzCCuE/maxresdefault.jpg" alt="Phase 1 Video 1 Thumbnail" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.7); border-radius: 50%; padding: 15px; display: flex; align-items: center; justify-content: center; transition: background 0.3s;">
+                    <svg viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" width="32" height="32" style="margin-left: 4px;"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </a>
+              </div>
+              <div style="aspect-ratio: 16/9; position: relative;">
+                <a href="https://www.youtube.com/watch?v=GyMg8mVALNQ" target="_blank" style="display: block; width: 100%; height: 100%;">
+                  <img src="https://img.youtube.com/vi/GyMg8mVALNQ/maxresdefault.jpg" alt="Phase 1 Video 2 Thumbnail" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.7); border-radius: 50%; padding: 15px; display: flex; align-items: center; justify-content: center; transition: background 0.3s;">
+                    <svg viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" width="32" height="32" style="margin-left: 4px;"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <div class="timeline-title">Phase 2: On-Rover Integration</div>
+              <div class="timeline-badge badge-upcoming">Upcoming</div>
+            </div>
+            <div class="timeline-desc">
+              <p>In the second phase, the same conversational capabilities will be deployed directly via the rover. This enables on-field interaction where the rover can verbally report field anomalies, pest detections, and weather conditions back to the farmer in real-time.</p>
+            </div>
+            <div style="margin-top: 20px;">
+              <div class="img-placeholder" style="height:210px; border-radius: var(--radius-sm);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><use href="#icon-video"/></svg>
+                <span>YouTube demo link coming soon</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
-    
 
+    <section class="page" id="page-pt-image-processing">
+      <div class="page-header">
+        <div class="page-eyebrow">Progress Timeline</div>
+        <h1 class="page-title">Image Processing</h1>
+      </div>
+      
+      <div class="section-block">
+        <div class="abstract-box">Content coming soon.</div>
+      </div>
+    </section>
+    
+    <section class="page" id="page-research-questions">
+      <div class="page-header">
+        <div class="page-eyebrow">Research</div>
+        <h1 class="page-title">Research Questions</h1>
+        <p class="page-subtitle">Core inquiries driving the AgriRover project.</p>
+      </div>
+      
+      <div class="section-block">
+        <div style="display: grid; gap: 20px;">
+          
+          <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; display: flex; gap: 15px; align-items: flex-start;">
+            <div style="background: var(--primary); color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">1</div>
+            <div>
+              <h3 style="margin-top: 0; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink);">Lightweight AI in Field Conditions 🌤️</h3>
+              <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-light);">How effectively can a lightweight deep learning architecture (e.g., YOLOv8n) accurately classify and detect crop anomalies under varying outdoor environmental factors like shifting sunlight, shadows, and wind?</p>
+            </div>
+          </div>
+
+          <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; display: flex; gap: 15px; align-items: flex-start;">
+            <div style="background: var(--primary); color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">2</div>
+            <div>
+              <h3 style="margin-top: 0; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink);">Edge vs. Server Inference Trade-offs ⚡</h3>
+              <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-light);">What is the trade-off between inference speed (frames per second) and detection accuracy when processing the rover's live video stream on a remote server versus an edge device?</p>
+            </div>
+          </div>
+
+          <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; display: flex; gap: 15px; align-items: flex-start;">
+            <div style="background: var(--primary); color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">3</div>
+            <div>
+              <h3 style="margin-top: 0; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink);">Pest vs. Beneficial Distinction 🐞</h3>
+              <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-light);">To what accuracy can the system distinguish between beneficial insects/plants and actual pests/weeds common to the local agricultural context?</p>
+            </div>
+          </div>
+
+          <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; display: flex; gap: 15px; align-items: flex-start;">
+            <div style="background: var(--primary); color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">4</div>
+            <div>
+              <h3 style="margin-top: 0; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink);">Microcontroller Latency & Wi-Fi 📡</h3>
+              <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-light);">How does the integration of low-cost microcontrollers (like the ESP32-S3) affect the latency of data transmission and real-time command execution under standard field Wi-Fi hotpots?</p>
+            </div>
+          </div>
+
+          <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; display: flex; gap: 15px; align-items: flex-start;">
+            <div style="background: var(--primary); color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">5</div>
+            <div>
+              <h3 style="margin-top: 0; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink);">Actuation Efficiency: Blade vs. Spray ⚙️</h3>
+              <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-light);">What mechanical design configurations for the actuation modules (blade vs. spray nozzle) provide the highest efficiency in terms of energy consumption and targeted destruction of anomalies?</p>
+            </div>
+          </div>
+
+          <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; display: flex; gap: 15px; align-items: flex-start;">
+            <div style="background: var(--primary); color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">6</div>
+            <div>
+              <h3 style="margin-top: 0; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink);">TSP Solver vs. Zigzag Coverage 🗺️</h3>
+              <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-light);">How much battery energy and operation time can be saved by implementing a Traveling Salesperson Problem (TSP) solver compared to a traditional raster/zigzag field coverage pattern?</p>
+            </div>
+          </div>
+
+          <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; display: flex; gap: 15px; align-items: flex-start;">
+            <div style="background: var(--primary); color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">7</div>
+            <div>
+              <h3 style="margin-top: 0; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink);">Real-time Dynamic Obstacle Avoidance 🛑</h3>
+              <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-light);">How dynamically can the route planning algorithm adapt to real-time obstacle avoidance (using ultrasonic sensors) without disrupting the pre-generated field anomaly map?</p>
+            </div>
+          </div>
+
+          <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; display: flex; gap: 15px; align-items: flex-start;">
+            <div style="background: var(--primary); color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">8</div>
+            <div>
+              <h3 style="margin-top: 0; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink);">Targeted Spot-Spraying Savings 💧</h3>
+              <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-light);">To what percentage can the deployment of a targeted spot-spraying mechanism reduce overall chemical/herbicide volume consumption compared to traditional blanket spraying methods?</p>
+            </div>
+          </div>
+
+          <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; display: flex; gap: 15px; align-items: flex-start;">
+            <div style="background: var(--primary); color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">9</div>
+            <div>
+              <h3 style="margin-top: 0; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink);">Reduction in Chemical Exposure 🌿</h3>
+              <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-light);">What is the measurable reduction in unintended healthy crop chemical exposure when transitioning from manual mixed farming methods to AI-driven precision farming?</p>
+            </div>
+          </div>
+
+          <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; display: flex; gap: 15px; align-items: flex-start;">
+            <div style="background: var(--primary); color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">10</div>
+            <div>
+              <h3 style="margin-top: 0; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink);">Socio-economic Constraints & Adoption 🧑‍🌾</h3>
+              <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-light);">How do socio-economic constraints, such as initial hardware costs and technical literacy among local farmers, impact the overall willingness and adoption rate of autonomous agricultural technologies?</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
     <section class="page" id="page-lit-m1"><div class="page-header"><div class="page-eyebrow">Literature Review</div><h1 class="page-title">Muntasir Rafin</h1></div><div class="abstract-box">Content coming soon.</div></section>
     <section class="page" id="page-lit-m2"><div class="page-header"><div class="page-eyebrow">Literature Review</div><h1 class="page-title">Tahura Anzum</h1></div><div class="abstract-box">Content coming soon.</div></section>
@@ -890,7 +1028,115 @@ ul{list-style:none}
     <section class="page" id="page-sw-ai"><div class="page-header"><div class="page-eyebrow">Software</div><h1 class="page-title">AI Model</h1><p class="page-subtitle">YOLOv8 training, dataset, and detection pipeline.</p></div><div class="abstract-box">Content coming soon.</div></section>
     <section class="page" id="page-sw-dashboard"><div class="page-header"><div class="page-eyebrow">Software</div><h1 class="page-title">Control Dashboard</h1></div><div class="abstract-box">Content coming soon.</div></section>
     <section class="page" id="page-hw-components"></section>
-    <section class="page" id="page-hw-block"><div class="page-header"><div class="page-eyebrow">Hardware</div><h1 class="page-title">Block Diagram</h1></div><div class="abstract-box">Content coming soon.</div></section>
+    <section class="page" id="page-hw-diagrams">
+      <div class="page-header">
+        <div class="page-eyebrow">Hardware</div>
+        <h1 class="page-title">Sketch and Diagrams</h1>
+        <p class="page-subtitle">Initial concepts, refined designs, and full system architecture.</p>
+      </div>
+
+      <div class="section-block">
+        <h2 class="section-heading">Initial Concept Sketches</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 40px;">
+          <div>
+            <h3 style="font-family: var(--font-display); font-size: 1.1rem; color: var(--ink); margin-bottom: 10px;">Early Sketch</h3>
+            <img src="assets/images/sketch_diagrams/early_sketch.png" alt="Early Sketch" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+          </div>
+          <div>
+            <h3 style="font-family: var(--font-display); font-size: 1.1rem; color: var(--ink); margin-bottom: 10px;">Refined Sketch</h3>
+            <img src="assets/images/sketch_diagrams/refined_sketch.jpg" alt="Refined Sketch" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+          </div>
+        </div>
+
+        <h2 class="section-heading">System Block Diagram</h2>
+        <div style="margin-bottom: 20px;">
+          <img src="assets/images/sketch_diagrams/block_diagram.jpeg" alt="Block Diagram" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+        </div>
+        
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 25px;">
+          <h3 style="font-family: var(--font-display); font-size: 1.2rem; color: var(--primary); margin-top: 0; margin-bottom: 15px;">Architecture Explanation</h3>
+          <p style="color: var(--ink-light); line-height: 1.6;">The block diagram illustrates the complete architecture of your AgriRover, showing how data flows from the sensors to the controller, how AI assists in decision-making, and how the rover performs actions based on those decisions.</p>
+          
+          <h4 style="color: var(--ink); margin-top: 20px; margin-bottom: 10px;">1. Vision System (ESP32-CAM)</h4>
+          <p style="color: var(--ink-light); line-height: 1.6; font-size: 0.95rem;">The ESP32-CAM serves as the rover's visual perception unit. Its built-in OV2640 camera captures images of crops and the surrounding environment. Instead of processing images locally, it transmits them via Wi-Fi to the AI server, where computer vision algorithms analyze the images to detect pests, weeds, or plant diseases.</p>
+
+          <h4 style="color: var(--ink); margin-top: 20px; margin-bottom: 10px;">2. Obstacle Avoidance</h4>
+          <p style="color: var(--ink-light); line-height: 1.6; font-size: 0.95rem;">An HC-SR04 ultrasonic sensor is mounted on an SG90 servo motor. The servo rotates the ultrasonic sensor to scan different directions, enabling the rover to detect obstacles before moving forward. Distance measurements are sent to the main controller to support safe navigation.</p>
+
+          <h4 style="color: var(--ink); margin-top: 20px; margin-bottom: 10px;">3. Environmental Sensors</h4>
+          <p style="color: var(--ink-light); line-height: 1.6; font-size: 0.95rem;">Three sensors continuously monitor field conditions:
+            <ul style="margin-top: 5px; margin-bottom: 5px;">
+              <li><strong>GPS Module (NEO-6M):</strong> Provides real-time geographic coordinates, allowing the rover to record where data is collected and where pests are detected.</li>
+              <li><strong>MQ-4 Gas Sensor:</strong> Measures methane concentration, which may indicate decomposition, poor soil conditions, or livestock-related gases.</li>
+              <li><strong>Soil Moisture Sensor:</strong> Measures the water content of the soil, helping assess irrigation requirements.</li>
+            </ul>
+            These sensors transmit their readings directly to the main controller.
+          </p>
+
+          <h4 style="color: var(--ink); margin-top: 20px; margin-bottom: 10px;">4. Main Controller (ESP32-WROOM-32)</h4>
+          <p style="color: var(--ink-light); line-height: 1.6; font-size: 0.95rem;">The ESP32-WROOM-32 acts as the brain of the rover. It integrates data from all sensors, receives AI predictions from the server, and controls the rover's movement and spraying operations.
+            <br><br>Its primary responsibilities include:
+            <ul style="margin-top: 5px; margin-bottom: 5px;">
+              <li>Collecting sensor data</li>
+              <li>Processing navigation decisions</li>
+              <li>Receiving AI detection results</li>
+              <li>Controlling motors</li>
+              <li>Activating the spray mechanism</li>
+              <li>Managing communication between hardware and the AI server</li>
+            </ul>
+          </p>
+
+          <h4 style="color: var(--ink); margin-top: 20px; margin-bottom: 10px;">5. AI Server</h4>
+          <p style="color: var(--ink-light); line-height: 1.6; font-size: 0.95rem;">The AI server performs computationally intensive image analysis that cannot be efficiently executed on the ESP32.
+            <br><br>Its tasks include:
+            <ul style="margin-top: 5px; margin-bottom: 5px;">
+              <li>Image preprocessing</li>
+              <li>Pest detection</li>
+              <li>Weed detection</li>
+              <li>Plant disease recognition (if implemented)</li>
+              <li>Returning prediction results to the rover</li>
+            </ul>
+            For example, if the AI detects aphids with high confidence, it sends that prediction back to the ESP32-WROOM-32, which decides whether spraying is necessary.
+          </p>
+
+          <h4 style="color: var(--ink); margin-top: 20px; margin-bottom: 10px;">6. Actuators and Outputs</h4>
+          <p style="color: var(--ink-light); line-height: 1.6; font-size: 0.95rem;">
+            <strong>Motor Driver (DRV8833)</strong><br>
+            The DRV8833 receives movement commands from the ESP32-WROOM-32 and drives the four DC motors, enabling: Forward movement, Reverse movement, Left turns, Right turns, and Speed control.
+            <br><br><strong>Relay Module</strong><br>
+            The relay functions as an electronic switch. When spraying is required, the ESP32 activates the relay, supplying power to the spray pump.
+            <br><br><strong>Speaker/Buzzer</strong><br>
+            The buzzer provides audible feedback, such as: Startup notification, Obstacle warnings, Pest detection alerts, Low battery warnings, and Task completion notifications.
+          </p>
+
+          <h4 style="color: var(--ink); margin-top: 20px; margin-bottom: 10px;">7. Mobility System</h4>
+          <p style="color: var(--ink-light); line-height: 1.6; font-size: 0.95rem;">The rover moves using four DC motors: Front-left motor, Front-right motor, Rear-left motor, and Rear-right motor. These motors provide traction for navigating agricultural fields.</p>
+
+          <h4 style="color: var(--ink); margin-top: 20px; margin-bottom: 10px;">8. Spray System</h4>
+          <p style="color: var(--ink-light); line-height: 1.6; font-size: 0.95rem;">The spray pump and nozzle are responsible for dispensing pesticide or herbicide. They operate only when the relay is activated by the main controller following an AI-based decision.</p>
+
+          <h4 style="color: var(--ink); margin-top: 20px; margin-bottom: 10px;">9. Power Supply</h4>
+          <p style="color: var(--ink-light); line-height: 1.6; font-size: 0.95rem;">A rechargeable LiPo battery powers the entire rover. Power is distributed to: ESP32-CAM, ESP32-WROOM-32, Sensors, Servo motor, Motor driver, Relay, Spray pump, and Speaker. A voltage regulator (if included) ensures that each component receives the correct operating voltage.</p>
+
+          <h4 style="color: var(--ink); margin-top: 20px; margin-bottom: 10px;">Overall Workflow</h4>
+          <p style="color: var(--ink-light); line-height: 1.6; font-size: 0.95rem;">
+            <ol style="margin-top: 5px; margin-bottom: 5px;">
+              <li>The rover begins moving through the field.</li>
+              <li>The ultrasonic sensor scans for obstacles while the environmental sensors continuously collect data.</li>
+              <li>The ESP32-CAM captures crop images and sends them to the AI server over Wi-Fi.</li>
+              <li>The AI server analyzes the images and returns predictions, such as pest identification.</li>
+              <li>The ESP32-WROOM-32 combines AI predictions with sensor data and determines the appropriate action.</li>
+              <li>If pests are detected, the relay activates the spray pump to apply pesticide.</li>
+              <li>The motor driver controls the rover's movement while the GPS logs the location of operations.</li>
+              <li>The buzzer provides audio notifications when necessary.</li>
+              <li>This process repeats continuously until the field has been surveyed.</li>
+            </ol>
+            <br>
+            Overall, the architecture follows a clear separation of responsibilities: the ESP32-CAM handles vision, the AI server performs image analysis, and the ESP32-WROOM-32 coordinates sensing, navigation, and actuation, resulting in an efficient and scalable smart agricultural rover.
+          </p>
+        </div>
+      </div>
+    </section>
     <section class="page" id="page-timeline">
       <div class="page-header">
         <div class="page-eyebrow">Others</div>
