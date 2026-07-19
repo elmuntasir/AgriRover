@@ -918,7 +918,77 @@ ul{list-style:none}
       </div>
       
       <div class="section-block">
-        <div class="abstract-box">Content coming soon.</div>
+        <h2 class="section-heading">Phase Overview</h2>
+        <div class="timeline-grid">
+          
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <div class="timeline-title">Introduction</div>
+            </div>
+            <div style="margin-top: 10px;">
+              <div class="timeline-desc">
+                <p>Computer vision is the core of AgriRover's precision agriculture capabilities. By utilizing deep learning models, the rover processes images from the field to detect pests (such as aphids), diseases, and weeds in real-time. This allows the system to make intelligent decisions for targeted treatment, minimizing chemical usage and protecting the crop ecosystem.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <div class="timeline-title">Phase 1: Pest Detection Model</div>
+              <div class="timeline-badge badge-completed">Completed</div>
+            </div>
+            <div class="timeline-desc">
+              <p>The first phase involves training and deploying our image processing model to accurately identify pests like aphids. The model analyzes visual data and places bounding boxes around detected bugs. This phase validates the model's accuracy and inference speed.</p>
+            </div>
+            <div style="margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              <div>
+                <img src="assets/images/image_processing/aphid_detection.png" alt="Aphid Detection History" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+              </div>
+              <div style="aspect-ratio: 16/9; position: relative;">
+                <a href="#" target="_blank" style="display: block; width: 100%; height: 100%; text-decoration: none;">
+                  <div class="img-placeholder" style="width: 100%; height: 100%; border-radius: var(--radius-sm);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 32px; height: 32px;"><use href="#icon-video"/></svg>
+                    <span>Insert YouTube Video Link Here</span>
+                  </div>
+                  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.7); border-radius: 50%; padding: 15px; display: flex; align-items: center; justify-content: center; transition: background 0.3s;">
+                    <svg viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" width="32" height="32" style="margin-left: 4px;"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <div class="timeline-title">Phase 2: Infestation Mapping</div>
+              <div class="timeline-badge badge-completed">Completed</div>
+            </div>
+            <div class="timeline-desc">
+              <p>In the second phase, the detection data is paired with location coordinates to generate a comprehensive field map. This map visually indicates the exact spots where aphid infestations were detected, allowing for optimized route planning and targeted spot-spraying.</p>
+            </div>
+            <div style="margin-top: 20px;">
+              <div>
+                <img src="assets/images/image_processing/aphid_detection_map.png" alt="Aphid Detection Map" style="width: 100%; max-width: 600px; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+              </div>
+            </div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <div class="timeline-title">Phase 3: On-Rover Integration</div>
+              <div class="timeline-badge badge-upcoming">Upcoming</div>
+            </div>
+            <div class="timeline-desc">
+              <p>In the third phase, the trained vision models and mapping logic will be fully integrated with the rover's onboard hardware. This enables the rover to autonomously scan the field, perform real-time pest detection, and seamlessly execute spot-spraying or weeding without relying on external compute resources.</p>
+            </div>
+            <div style="margin-top: 20px;">
+              <div class="img-placeholder" style="height:210px; border-radius: var(--radius-sm);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><use href="#icon-video"/></svg>
+                <span>YouTube demo link coming soon</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
     

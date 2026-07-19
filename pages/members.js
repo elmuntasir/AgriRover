@@ -31,43 +31,44 @@ var SUPERVISOR = {
    ██  MEMBER 1
    ════════════════════════════════════════════════════════════ */
 var MEMBER1 = {
-  name:     "Md Muntasir Rahman Rafin",
-  id:      "2222397",
-  pic:      "assets/images/members/muntasir.jpg",
-  role:     "Team Lead · AI & Software · Project Management · Hardware",
-  quote:    "Building the future of farming, one line of code at a time.",
-  github:   "https://github.com/elmuntasir",
-  fb:       "https://www.facebook.com/mun.rafin/",
-  linkedin: "https://www.linkedin.com/in/munrafin/",
-  rg:       "",
+  name:         "Md Muntasir Rahman Rafin",
+  id:           "2222397",           /* ← update with real student ID */
+  pic:          "assets/images/members/muntasir.jpg",
+  role:         "Team Lead · AI & Software · Project Management · Hardware",
+  contribution: "Led overall project architecture, Built AI plant disease detection pipeline, Developed and maintained the project website, Managed team coordination and sprint planning, Integrated hardware with software systems",
+  github:       "https://github.com/elmuntasir",
+  fb:           "https://www.facebook.com/mun.rafin/",
+  linkedin:     "https://www.linkedin.com/in/munrafin/",
+  rg:           "",
 };
 
 /* ════════════════════════════════════════════════════════════
    ██  MEMBER 2
    ════════════════════════════════════════════════════════════ */
 var MEMBER2 = {
-  name:     "Tahura Anzum Toa",
-  pic:      "assets/images/members/toa.jpg",
-  role:     "Hardware & Embedded Systems",
-  quote:    "Every circuit is a conversation between power and precision.",
-  github:   "https://github.com/tahura98",
-  ID:       "2230230",
-  linkedin: "https://www.linkedin.com/in/tahura-anzum-toa-33194826a/",
-  rg:       "",
+  name:         "Tahura Anzum Toa",
+  id:           "2230230",           /* ← update with real student ID */
+  pic:          "assets/images/members/toa.jpg",
+  role:         "Hardware & Embedded Systems",
+  contribution: "Designed and assembled rover chassis, Wired and tested embedded sensor systems, Managed motor driver and power distribution, Debugged hardware-software interface issues",
+  github:       "https://github.com/tahura98",
+  linkedin:     "https://www.linkedin.com/in/tahura-anzum-toa-33194826a/",
+  rg:           "",
 };
 
 /* ════════════════════════════════════════════════════════════
    ██  MEMBER 3
    ════════════════════════════════════════════════════════════ */
 var MEMBER3 = {
-  name:     "Maria Jahan Noon",
-  pic:      "assets/images/members/noon.jpg",
-  role:     "AI & Computer Vision Engineer (Software)",
-  quote:    "Transforming data into decisions, and innovation into sustainable harvests.",
-  github:   "https://github.com/Maria-Jahan-Noon?tab=repositories",
-  fb:       "",
-  linkedin: "https://www.linkedin.com/in/maria-jahan-noon-1245b23bb/",
-  rg:       "",
+  name:         "Maria Jahan Noon",
+  id:           "2310001",           /* ← update with real student ID */
+  pic:          "assets/images/members/noon.jpg",
+  role:         "AI & Computer Vision Engineer (Software)",
+  contribution: "Trained and fine-tuned computer vision models, Curated and labelled plant disease datasets, Implemented image preprocessing pipelines, Evaluated model accuracy and optimized performance",
+  github:       "https://github.com/Maria-Jahan-Noon?tab=repositories",
+  fb:           "",
+  linkedin:     "https://www.linkedin.com/in/maria-jahan-noon-1245b23bb/",
+  rg:           "",
 };
 
 /* ════════════════════════════════════════════════════════════
@@ -75,14 +76,15 @@ var MEMBER3 = {
    ════════════════════════════════════════════════════════════ */
 
 var MEMBER4 = {
-  name:     "Mobasshira Akter",
-  pic:      "assets/images/members/muba.jpg",
-  role:     "",
-  quote:    "Your quote here.",
-  github:   "https://github.com/mobasshira13",
-  fb:       "https://www.facebook.com/share/1B8BC1qPx5/",
-  linkedin: "https://www.linkedin.com/in/mobasshira-akter-7383b340b?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-  rg:       "2210766",
+  name:         "Mobasshira Akter",
+  id:           "2210766",           /* ← update with real student ID */
+  pic:          "assets/images/members/muba.jpg",
+  role:         "",
+  contribution: "Assisted in hardware assembly, Helped with documentation and reporting, Supported testing and validation tasks",
+  github:       "https://github.com/mobasshira13",
+  fb:           "https://www.facebook.com/share/1B8BC1qPx5/",
+  linkedin:     "https://www.linkedin.com/in/mobasshira-akter-7383b340b?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+  rg:           "",
 };
 
 /* ════════════════════════════════════════════════════════════
@@ -90,14 +92,15 @@ var MEMBER4 = {
    ════════════════════════════════════════════════════════════ */
 
 var MEMBER5 = {
-  name:     "Sumaiya Nasrin",
-  pic:      "assets/images/members/suma.jpg",
-  role:     "Software",
-  quote:    "Great software is built through teamwork, creativity, and continuous learning.",
-  github:   "https://github.com/tabassumhmm",
-  fb:       "https://www.facebook.com/share/1Vnxkid3Ky/?mibextid=wwXIfr",
-  linkedin: "",
-  rg:       "",
+  name:         "Sumaiya Nasrin",
+  id:           "2310002",           /* ← update with real student ID */
+  pic:          "assets/images/members/suma.jpg",
+  role:         "Software",
+  contribution: "Developed backend API endpoints, Wrote and reviewed code modules, Participated in software testing and debugging, Collaborated on feature integration",
+  github:       "https://github.com/tabassumhmm",
+  fb:           "https://www.facebook.com/share/1Vnxkid3Ky/?mibextid=wwXIfr",
+  linkedin:     "",
+  rg:           "",
 };
 /* ════════════════════════════════════════════════════════════
    RENDER ENGINE — no need to edit below this line
@@ -217,6 +220,14 @@ var MEMBER5 = {
     fr.appendChild(nb);
     pc.appendChild(fr);
 
+    /* Student ID badge (below photo) */
+    if (data.id) {
+      var idBadge = document.createElement('div');
+      idBadge.className = 'member-id-badge';
+      idBadge.innerHTML = '<span class="member-id-label">ID</span><span class="member-id-value">' + data.id + '</span>';
+      pc.appendChild(idBadge);
+    }
+
     /* Info col */
     var ic = document.createElement('div');
     ic.className = 'member-info-col';
@@ -236,11 +247,33 @@ var MEMBER5 = {
     rl.textContent = data.role;
     ic.appendChild(rl);
 
-    if (data.quote) {
-      var q = document.createElement('div');
-      q.className = 'member-quote';
-      q.textContent = data.quote;
-      ic.appendChild(q);
+    /* Contribution collapsible */
+    if (data.contribution) {
+      var items = data.contribution.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+
+      var details = document.createElement('details');
+      details.className = 'member-contrib-details';
+
+      var summary = document.createElement('summary');
+      summary.className = 'member-contrib-summary';
+      summary.innerHTML = '<span class="contrib-title">Contributions</span><span class="contrib-expand-label">Expand</span>';
+      details.appendChild(summary);
+
+      var ul = document.createElement('ul');
+      ul.className = 'member-contrib-list';
+      items.forEach(function (item) {
+        var li = document.createElement('li');
+        li.textContent = item;
+        ul.appendChild(li);
+      });
+      details.appendChild(ul);
+
+      /* Swap label text on toggle */
+      details.addEventListener('toggle', function () {
+        summary.querySelector('.contrib-expand-label').textContent = details.open ? 'Collapse' : 'Expand';
+      });
+
+      ic.appendChild(details);
     }
 
     var ml = document.createElement('div');

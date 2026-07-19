@@ -297,29 +297,109 @@
   margin-bottom: 16px;
 }
 
-.member-quote {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 15px 18px 15px 22px;
-  font-size: 0.86rem;
-  color: var(--ink2);
-  line-height: 1.7;
-  font-style: italic;
-  position: relative;
-  margin-bottom: 20px;
+/* ── Student ID badge ── */
+.member-id-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent-dark, #1a472a) 0%, var(--accent-mid, #2d6a4f) 100%);
+  border: 1px solid var(--accent-mid, #2d6a4f);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+}
+.member-id-label {
+  color: rgba(255,255,255,0.6);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+}
+.member-id-value {
+  color: #fff;
+  font-weight: 700;
+  font-family: var(--font-mono, monospace);
+  letter-spacing: 0.12em;
 }
 
-.member-quote::before {
-  content: '\201C';
-  font-family: var(--font-display);
-  font-size: 2.8rem;
-  color: var(--accent-mid);
+/* ── Contributions collapsible ── */
+.member-contrib-details {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.member-contrib-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 16px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+.member-contrib-summary::-webkit-details-marker { display: none; }
+
+.contrib-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--ink2);
+}
+
+.contrib-expand-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent-mid, #2d6a4f);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: opacity 0.2s;
+}
+.member-contrib-summary:hover .contrib-expand-label {
+  opacity: 0.7;
+}
+
+/* animated expand */
+.member-contrib-list {
+  margin: 0;
+  padding: 0 16px 14px 16px;
+  list-style: none;
+  border-top: 1px solid var(--border);
+}
+
+.member-contrib-details[open] .member-contrib-list {
+  animation: contribFadeIn 0.25s ease;
+}
+@keyframes contribFadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+.member-contrib-list li {
+  position: relative;
+  padding: 7px 0 7px 28px;
+  font-size: 0.84rem;
+  color: var(--ink2);
+  line-height: 1.55;
+  border-bottom: 1px solid transparent;
+}
+.member-contrib-list li:last-child {
+  border-bottom: none;
+}
+
+/* Leaf / flower bullet */
+.member-contrib-list li::before {
+  content: '🌿';
   position: absolute;
-  top: -6px;
-  left: 12px;
+  left: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
   line-height: 1;
-  font-style: normal;
 }
 
 /* Social link buttons */
