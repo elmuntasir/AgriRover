@@ -297,30 +297,23 @@
   margin-bottom: 16px;
 }
 
-/* ── Student ID badge ── */
-.member-id-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 10px;
-  padding: 4px 12px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--accent-dark, #1a472a) 0%, var(--accent-mid, #2d6a4f) 100%);
-  border: 1px solid var(--accent-mid, #2d6a4f);
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
+/* ── Student ID row ── */
+.member-id-row {
+  margin-top: -2px;
+  margin-bottom: 8px;
 }
-.member-id-label {
-  color: rgba(255,255,255,0.6);
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 0.68rem;
-}
-.member-id-value {
-  color: #fff;
-  font-weight: 700;
+.member-id-tag {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 0.63rem;
   font-family: var(--font-mono, monospace);
-  letter-spacing: 0.12em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--ink2);
+  opacity: 0.65;
 }
 
 /* ── Contributions collapsible ── */
