@@ -260,15 +260,17 @@
 
 /* Info column */
 .member-info-col {
-  width: 100%;
+  width: 380px;
   max-width: 380px;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .member-card.flip .member-info-col {
-  /* removed justify-self: end */
+  /* photo on right, info on left */
 }
 .member-card:not(.flip) .member-info-col {
-  /* removed justify-self: start */
+  /* photo on left, info on right */
 }
 
 .member-index-label {

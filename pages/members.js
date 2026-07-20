@@ -32,10 +32,10 @@ var SUPERVISOR = {
    ════════════════════════════════════════════════════════════ */
 var MEMBER1 = {
   name: "Md Muntasir Rahman Rafin",
-  id: "2222397",           /* ← update with real student ID */
+  id: "2222397",
   pic: "assets/images/members/muntasir.jpg",
-  role: "Team Lead · AI & Software · Project Management · Hardware",
-  contribution: "Led overall project architecture, Built the project showcase website, Engineered the 'Reaper' conversational AI using the Groq API to provide real-time farming advice, Trained YOLOv8n models (via Roboflow) for pest-weed and disease detection, Built the end-to-end agricultural AI pipeline integrating YOLOv8 vision models with the Reaper conversational assistant, Built the local server and webapp interface to manage the farm ecosystem including 1. AI conversations 2. Image processing history 3. Rover tracking and 4. Weather-integrated farmer profiles.",
+  role: "Team Lead · Web Development AI & Software · Project Management · Hardware",
+  contribution: "Planned overall project architecture, Built the project showcase website, Engineered the 'Reaper' conversational AI using the Groq API to provide real-time farming advice, Trained YOLOv8n models (via Roboflow) for pest-weed and disease detection, Built the end-to-end agricultural AI pipeline integrating YOLOv8 vision models with the Reaper conversational assistant, Built the local server and webapp interface to manage the farm ecosystem including 1. AI conversations 2. Image processing history 3. Rover tracking and 4. Weather-integrated farmer profiles, Wrote and installed proper firmware in esp32  that meets the project objectives",
   github: "https://github.com/elmuntasir",
   fb: "https://www.facebook.com/mun.rafin/",
   linkedin: "https://www.linkedin.com/in/munrafin/",
@@ -47,10 +47,10 @@ var MEMBER1 = {
    ════════════════════════════════════════════════════════════ */
 var MEMBER2 = {
   name: "Tahura Anzum Toa",
-  id: "2230230",           /* ← update with real student ID */
+  id: "2230230",
   pic: "assets/images/members/toa.jpg",
-  role: "Hardware & Embedded Systems",
-  contribution: "Designed and assembled the 4WD rover chassis, wired the L298N motor driver and DC motors, integrated the ESP32-WROOM-32 and ESP32-CAM microcontrollers, and mounted the agricultural spray module and cutting blade actuators.",
+  role: "Team Management,Logistics,Research",
+  contribution: "Team Management – Coordinating team members and assigning tasks efficiently, Project Management – (Planning-organizing-and delivering projects on time),Software Management – Managing software development- testing and maintenance, Bangla Language Code Development & Hardware Integration – Developing Bangla language solutions and integrating them with hardware systems, Literature Review – Reviewing and summarizing existing research to support a project or study",
   github: "https://github.com/tahura98",
   linkedin: "https://www.linkedin.com/in/tahura-anzum-toa-33194826a/",
   rg: "",
@@ -61,10 +61,10 @@ var MEMBER2 = {
    ════════════════════════════════════════════════════════════ */
 var MEMBER3 = {
   name: "Maria Jahan Noon",
-  id: "2310001",           /* ← update with real student ID */
+  id: "2222637",
   pic: "assets/images/members/noon.jpg",
-  role: "AI & Computer Vision Engineer (Software)",
-  contribution: "Developed the core AI vision pipeline for agricultural analysis, trained the YOLOv8 Roboflow models for weed, pest, and disease detection, curated and annotated the crop image datasets, and optimized the inference endpoints for real-time analysis.",
+  role: "Project Research, Hardware Assembly, ",
+  contribution: "Researched existing products and used technologies to document project requirements, Assembled the chasiss with hardware components(motors, ultrasonic sensor for smotth rover movement",
   github: "https://github.com/Maria-Jahan-Noon?tab=repositories",
   fb: "",
   linkedin: "https://www.linkedin.com/in/maria-jahan-noon-1245b23bb/",
@@ -79,8 +79,8 @@ var MEMBER4 = {
   name: "Mobasshira Akter",
   id: "2210766",           /* ← update with real student ID */
   pic: "assets/images/members/muba.jpg",
-  role: "",
-  contribution: "hi hello",
+  role: "Hardware Implementation & Data Analyst",
+  contribution: "Designing and testing sprayer mechanism, Power management and supply integration with LM2596 buck converter, Connecting 5V Relay Module for pump control, Wiring SRP Micro Submersible Water Pump, Interfacing MG90S Servo Motor for nozzle positioning, Analyzing sensor data and field performance, Assisting in hardware assembly and implementation.",
   github: "https://github.com/mobasshira13",
   fb: "https://www.facebook.com/share/1B8BC1qPx5/",
   linkedin: "https://www.linkedin.com/in/mobasshira-akter-7383b340b?utm_source=share_via&utm_content=profile&utm_medium=member_android",
@@ -93,10 +93,10 @@ var MEMBER4 = {
 
 var MEMBER5 = {
   name: "Sumaiya Nasrin",
-  id: "2310002",           /* ← update with real student ID */
+  id: "2131353",           /* ← update with real student ID */
   pic: "assets/images/members/suma.jpg",
-  role: "Software",
-  contribution: "hi hello",
+  role: "Hardware Assembler",
+  contribution: "Soldering electronic components, Connecting ESP32 to the L298N motor driver, Performing GPIO pin connections, Wiring motors and electronic modules, Assisting in hardware assembly.",
   github: "https://github.com/tabassumhmm",
   fb: "https://www.facebook.com/share/1Vnxkid3Ky/?mibextid=wwXIfr",
   linkedin: "",

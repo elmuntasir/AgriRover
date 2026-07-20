@@ -24,7 +24,7 @@ var LITR_M2_REVIEWER = {
   summary:  "This literature review examines recent advancements in AI-based agricultural robotics, focusing on weed detection, pest monitoring, robotic weeding, digital field mapping, and autonomous navigation. Most studies utilize deep learning models such as YOLOv5 and YOLOv8 to improve detection accuracy and support precision agriculture. While existing research addresses individual challenges like detection, mapping, or path planning, few solutions integrate all functionalities into a single autonomous rover platform. This review highlights these research gaps and provides the foundation for developing AgriRover, an intelligent system that combines anomaly detection, field mapping, route optimization, and targeted treatment for sustainable farming.",       /* 1-2 sentences about what topics you covered in your review */
 };
 
-var MEMBER2 = {
+var LITR_M2_MEMBER = {
   name:     "Tahura Anzum Toa",
   pic:      "assets/images/members/toa.jpg",
   role:     "Hardware & Embedded Systems",

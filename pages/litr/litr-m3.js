@@ -24,7 +24,7 @@ var LITR_M3_REVIEWER = {
   summary:  "I have reviewed several papers on autonomous rover navigation and embedded systems, focusing on the integration of AI and computer vision techniques.",       /* 1-2 sentences about what topics you covered in your review */
 };
 
-var MEMBER3 = {
+var LITR_M3_MEMBER = {
   name:     "Maria Jahan Noon",
   pic:      "assets/images/members/noon.jpg",
   role:     "AI & Computer Vision Engineer (Software)",
