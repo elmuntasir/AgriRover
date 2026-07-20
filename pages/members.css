@@ -163,9 +163,10 @@
 /* ── Member Cards ── */
 .member-card {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: max-content max-content;
+  justify-content: center;
   gap: 52px;
-  align-items: center;
+  align-items: start;
   margin-bottom: 72px;
 }
 
@@ -264,10 +265,10 @@
 }
 
 .member-card.flip .member-info-col {
-  justify-self: end;
+  /* removed justify-self: end */
 }
 .member-card:not(.flip) .member-info-col {
-  justify-self: start;
+  /* removed justify-self: start */
 }
 
 .member-index-label {
