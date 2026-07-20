@@ -18,17 +18,19 @@
       <div class="page-header">
         <div class="page-eyebrow">Build</div>
         <h1 class="page-title">Prototype</h1>
-        <p class="page-subtitle">Physical rover build — chassis, electronics, and assembly progress.</p>
+        <p class="page-subtitle">Physical build, chassis assembly, and hardware integration of the AgriRover.</p>
       </div>
 
       <div class="proto-status-row">
         ${[
-          ['done',   'Chassis Design'],
-          ['active', 'Electronics Mounting'],
-          ['active', 'Firmware Integration'],
-          ['todo',   'Blade Module'],
-          ['todo',   'Spray Module'],
-          ['todo',   'Field Testing'],
+          ['done',   'Chassis Assembly'],
+          ['done',   'Motor & L298N Driver Wiring'],
+          ['done',   'ESP32-WROOM-32 Integration'],
+          ['done',   'ESP32-CAM Mounting'],
+          ['done',   'Power Supply (18650 + Buck Converter)'],
+          ['active', 'Servo & Spray Nozzle Assembly'],
+          ['todo',   'Ultrasonic Sensor Integration'],
+          ['todo',   'Full Field Test'],
         ].map(([s, l]) => `
           <div class="proto-status-badge">
             <span class="dot dot-${s}"></span>${l}
@@ -36,19 +38,28 @@
       </div>
 
       <div class="section-block">
-        <h2 class="section-heading">Rover Photos</h2>
-        <div class="photo-grid">
-          ${[
-            ['rover-front.jpg',  'Front View'],
-            ['rover-side.jpg',   'Side View'],
-            ['rover-chassis.jpg','Chassis'],
-            ['rover-pcb.jpg',    'Electronics'],
-          ].map(([file, label]) => `
-            <div class="photo-slot">
-              <img src="assets/images/prototype/${file}"
-                alt="${label}"
-                onerror="this.parentNode.innerHTML='<svg viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'currentColor\\' stroke-width=\\'1.5\\'><rect x=\\'3\\' y=\\'3\\' width=\\'18\\' height=\\'18\\' rx=\\'2\\'/><circle cx=\\'8.5\\' cy=\\'8.5\\' r=\\'1.5\\'/><polyline points=\\'21 15 16 10 5 21\\'/></svg><span class=\\'photo-slot-label\\'>${label}</span>'">
-            </div>`).join('')}
+        <h2 class="section-heading">Build Photos</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px">
+          <div style="grid-column:1/-1">
+            <img src="assets/images/prototype/birdview.jpg" alt="AgriRover Bird's Eye View"
+              style="width:100%;height:240px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);">
+            <div style="margin-top:8px;font-family:var(--font-mono);font-size:.72rem;color:var(--muted);text-align:center;">Bird's eye view of the assembled AgriRover chassis</div>
+          </div>
+          <div>
+            <img src="assets/images/prototype/chasis.jpg" alt="AgriRover Chassis"
+              style="width:100%;height:180px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);">
+            <div style="margin-top:6px;font-family:var(--font-mono);font-size:.72rem;color:var(--muted);text-align:center;">4-wheel chassis frame with motor mounts</div>
+          </div>
+          <div>
+            <img src="assets/images/prototype/motors.jpg" alt="Drive Motors"
+              style="width:100%;height:180px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);">
+            <div style="margin-top:6px;font-family:var(--font-mono);font-size:.72rem;color:var(--muted);text-align:center;">DC gear motors and wheel assembly</div>
+          </div>
+          <div style="grid-column:1/-1">
+            <img src="assets/images/prototype/zoom view.jpg" alt="AgriRover Close-Up"
+              style="width:100%;height:220px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);">
+            <div style="margin-top:8px;font-family:var(--font-mono);font-size:.72rem;color:var(--muted);text-align:center;">Close-up view of electronics and sensor mounting</div>
+          </div>
         </div>
       </div>
 
@@ -59,32 +70,23 @@
             <thead><tr><th>Component</th><th>Details</th></tr></thead>
             <tbody>
               ${[
-                ['Chassis',          '<strong>4WD Rover Frame</strong><span class="spec-sub">Aluminium alloy, 300×220mm footprint</span>'],
-                ['Drive Motors',     '<strong>12V DC Gear Motors ×4</strong><span class="spec-sub">Torque: 1.5 kg·cm, 150 RPM</span>'],
-                ['Motor Driver',     '<strong>L298N / BTS7960</strong><span class="spec-sub">Dual H-bridge, 2A continuous per channel</span>'],
-                ['Microcontroller',  '<strong>ESP32-S3</strong><span class="spec-sub">Dual-core 240 MHz, Wi-Fi + BT built-in</span>'],
-                ['Camera',           '<strong>OV2640</strong><span class="spec-sub">2MP, MJPEG stream, 30 FPS @ 800×600</span>'],
-                ['GPS',              '<strong>NEO-6M</strong><span class="spec-sub">Serial/UART, 1Hz update rate, ±2.5m CEP</span>'],
-                ['Proximity',        '<strong>HC-SR04 ×2</strong><span class="spec-sub">Ultrasonic, 2–400cm range, front + rear</span>'],
-                ['Battery',          '<strong>11.1V 3S LiPo</strong><span class="spec-sub">2200 mAh, ~45 min field runtime</span>'],
-                ['Blade Module',     '<strong>DC Motor + Blade</strong><span class="spec-sub">Weed cutting actuator, PWM controlled</span>'],
-                ['Spray Module',     '<strong>Peristaltic Pump + Nozzle</strong><span class="spec-sub">Herbicide/pesticide spot spray, 12V</span>'],
+                ['Chassis',          '<strong>4WD Robot Car Chassis Kit</strong><span class="spec-sub">4-wheel drive, includes motors & wheels</span>'],
+                ['Drive Motors',     '<strong>MG90S Metal Gear Micro Servo ×1 + DC Motors ×4</strong><span class="spec-sub">For steering and drive</span>'],
+                ['Motor Driver',     '<strong>L298N Dual H-Bridge</strong><span class="spec-sub">Replaces DRV8833 — 2A/channel, 5–35V supply</span>'],
+                ['Microcontroller',  '<strong>ESP32-WROOM-32</strong><span class="spec-sub">Dual-core 240 MHz, Wi-Fi + BT built-in</span>'],
+                ['Camera',           '<strong>ESP32-CAM (OV2640)</strong><span class="spec-sub">2MP, MJPEG stream via Wi-Fi</span>'],
+                ['Audio',            '<strong>MAX98357A I2S Amplifier + INMP441 Mic</strong><span class="spec-sub">Replaces DFPlayer — voice I/O for Reaper AI</span>'],
+                ['Speaker',          '<strong>2-inch 4Ω 3W Speaker</strong>'],
+                ['Proximity',        '<strong>HC-SR04 Ultrasonic Sensor</strong><span class="spec-sub">2–400cm range, obstacle avoidance</span>'],
+                ['Relay',            '<strong>5V 1-Channel Relay Module</strong><span class="spec-sub">For pump/blade switching</span>'],
+                ['Spray',            '<strong>SRP Micro Submersible Pump + Silicone Tube + Nozzle</strong><span class="spec-sub">Spot-spray pesticide/herbicide</span>'],
+                ['Power',            '<strong>2× 18650 Li-ion (2600mAh, 5C)</strong><span class="spec-sub">+ LM2596 Buck Converter (12V→5V)</span>'],
               ].map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('')}
             </tbody>
           </table>
         </div>
-      </div>
-
-      <div class="section-block">
-        <h2 class="section-heading">Assembly Notes</h2>
-        <div class="abstract-box">
-          The rover chassis uses a modular mounting plate system allowing the blade and spray modules
-          to be attached or detached independently. The ESP32-S3 is mounted on a custom PCB carrier
-          with breakout headers for motor driver, sensor, and actuator connections. All wiring is
-          routed through cable management channels to avoid interference with the drive wheels.
-          Build photos will be added here as assembly progresses.
-        </div>
       </div>`;
+  }
   }
 
   /* ════════════════════════════════════════════════════════════
@@ -167,18 +169,18 @@
       <div class="page-header">
         <div class="page-eyebrow">Software</div>
         <h1 class="page-title">AI Model</h1>
-        <p class="page-subtitle">YOLOv8-based weed, pest, and disease detection pipeline.</p>
+        <p class="page-subtitle">Three specialised YOLOv8n models trained on Roboflow 3.0 (Fast) and served via Roboflow Hosted Inference — detecting pests, weeds, and plant diseases from rover-captured images.</p>
       </div>
 
       <div class="section-block">
         <h2 class="section-heading">Detection Pipeline</h2>
         <div class="ai-pipeline">
           ${[
-            ['01', 'Frame Capture',    'OV2640 streams MJPEG frames to control room at 30 FPS over Wi-Fi.'],
-            ['02', 'Pre-processing',   'Frames resized to 640×640, normalised, and batched for inference.'],
-            ['03', 'YOLOv8 Inference', 'Model classifies each frame into Weed, Pest, or Disease with bounding boxes and confidence scores.'],
-            ['04', 'GPS Tagging',      'Detections above confidence threshold are tagged with current GPS coordinates.'],
-            ['05', 'Map Update',       'Tagged anomalies are written to the SQLite field map database and rendered on the dashboard.'],
+            ['01', 'Image Capture',     'ESP32-CAM (OV2640) captures images of the field and sends them to the laptop control room over Wi-Fi.'],
+            ['02', 'Pre-processing',    'Images are Base64-encoded and submitted to the Roboflow Hosted Inference API — no local GPU required.'],
+            ['03', 'Triple Inference',  'Each image is run through all three models in parallel: Pest · Weed · Plant Disease detection.'],
+            ['04', 'Thresholding',      'Predictions below the 20% confidence threshold are discarded. Severity is graded by confidence: Low / Medium / High.'],
+            ['05', 'DB & Dashboard',    'Confirmed detections are written to the SQLite database and rendered live on the field map and history view.'],
           ].map(([n, t, d]) => `
             <div class="ai-pipe-step">
               <div class="ai-pipe-num">${n}</div>
@@ -189,22 +191,75 @@
       </div>
 
       <div class="section-block">
-        <h2 class="section-heading">Model Configuration</h2>
+        <h2 class="section-heading">Trained Models — Roboflow 3.0</h2>
+        <div class="two-col" style="gap:18px;margin-bottom:0">
+
+          <div class="content-card">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+              <span style="font-size:1.6rem">🐛</span>
+              <div>
+                <div style="font-family:var(--font-display);font-weight:600;font-size:1.05rem;color:var(--ink)">Pest Detection</div>
+                <div style="font-family:var(--font-mono);font-size:.65rem;color:var(--accent);margin-top:2px">pest-detection-yu4hv-csabq / v1</div>
+              </div>
+            </div>
+            <table class="spec-table" style="margin-bottom:0">
+              <tbody>
+                <tr><td>Architecture</td><td><strong>YOLOv8n</strong> <span class="spec-sub">Roboflow 3.0 Fast</span></td></tr>
+                <tr><td>Dataset</td><td><strong>Roboflow Universe</strong> <span class="spec-sub">Pest Detection Dataset</span></td></tr>
+                <tr><td>Classes (9)</td><td><span class="spec-sub">Aphids · Armyworm · Beetle · Bollworm · Grasshopper · Mites · Mosquito · Sawfly · Stem Borer</span></td></tr>
+                <tr><td>Confidence Threshold</td><td><strong>20%</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="content-card">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+              <span style="font-size:1.6rem">🌿</span>
+              <div>
+                <div style="font-family:var(--font-display);font-weight:600;font-size:1.05rem;color:var(--ink)">Weed Detection</div>
+                <div style="font-family:var(--font-mono);font-size:.65rem;color:var(--accent);margin-top:2px">weed-detection-esm0d-ia4dm / v1</div>
+              </div>
+            </div>
+            <table class="spec-table" style="margin-bottom:0">
+              <tbody>
+                <tr><td>Architecture</td><td><strong>YOLOv8n</strong> <span class="spec-sub">Roboflow 3.0 Fast</span></td></tr>
+                <tr><td>Dataset</td><td><strong>Roboflow Universe</strong> <span class="spec-sub">Weed Detection Dataset</span></td></tr>
+                <tr><td>Classes</td><td><span class="spec-sub">Weed (dense patch presence detection)</span></td></tr>
+                <tr><td>Confidence Threshold</td><td><strong>20%</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="content-card" style="grid-column:1/-1">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+              <span style="font-size:1.6rem">🍂</span>
+              <div>
+                <div style="font-family:var(--font-display);font-weight:600;font-size:1.05rem;color:var(--ink)">Plant Disease Detection</div>
+                <div style="font-family:var(--font-mono);font-size:.65rem;color:var(--accent);margin-top:2px">plant-disease-xdjxh-9cpbm / v1</div>
+              </div>
+            </div>
+            <table class="spec-table" style="margin-bottom:0">
+              <tbody>
+                <tr><td>Architecture</td><td><strong>YOLOv8n</strong> <span class="spec-sub">Roboflow 3.0 Fast — trained 2026-07-19</span></td></tr>
+                <tr><td>Dataset</td><td><strong>Roboflow Universe</strong> <span class="spec-sub">Plant Disease Detection Dataset</span></td></tr>
+                <tr><td>Classes (14+)</td><td><span class="spec-sub">Bacterial Blight · Leaf Blight · Early Blight · Late Blight · Leaf Spot · Brown Spot · Powdery Mildew · Downy Mildew · Anthracnose · Rust · Fusarium Wilt · Root Rot · Mosaic Virus · Nitrogen Deficiency · Rice Blast</span></td></tr>
+                <tr><td>Confidence Threshold</td><td><strong>20%</strong> <span class="spec-sub">Lowered to account for lower confidence ranges in plant disease models</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="section-block">
+        <h2 class="section-heading">Severity Classification</h2>
         <div class="content-card" style="padding:0;overflow:hidden">
           <table class="spec-table">
-            <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+            <thead><tr><th>Severity</th><th>Confidence Range</th><th>Action</th></tr></thead>
             <tbody>
-              ${[
-                ['Base Architecture', '<strong>YOLOv8n</strong><span class="spec-sub">Nano variant — optimised for speed on laptop CPU</span>'],
-                ['Input Size',        '<strong>640 × 640 px</strong>'],
-                ['Classes',           '<strong>3</strong><span class="spec-sub">Weed · Pest · Disease</span>'],
-                ['Confidence Threshold', '<strong>0.45</strong><span class="spec-sub">Detections below this are ignored</span>'],
-                ['IoU Threshold',     '<strong>0.50</strong><span class="spec-sub">NMS overlap threshold</span>'],
-                ['Dataset Source',    '<strong>Roboflow + custom field images</strong>'],
-                ['Training Framework','<strong>Ultralytics YOLOv8 · PyTorch</strong>'],
-                ['Inference Target',  '<strong>Laptop CPU (no GPU required)</strong>'],
-                ['Target FPS',        '<strong>≥ 15 FPS</strong><span class="spec-sub">During live stream inference</span>'],
-              ].map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('')}
+              <tr><td><span style="color:#d6553d;font-weight:600">● High</span></td><td><strong>≥ 75%</strong></td><td>Immediate intervention required</td></tr>
+              <tr><td><span style="color:#e2a23a;font-weight:600">● Medium</span></td><td><strong>50 – 74%</strong></td><td>Monitor closely, treat within days</td></tr>
+              <tr><td><span style="color:#6fae63;font-weight:600">● Low</span></td><td><strong>20 – 49%</strong></td><td>Log and observe; re-analyse later</td></tr>
             </tbody>
           </table>
         </div>
@@ -214,11 +269,13 @@
         <h2 class="section-heading">Training Status</h2>
         <div class="proto-status-row">
           ${[
-            ['done',   'Dataset Collection Plan'],
-            ['active', 'Data Labelling (Roboflow)'],
-            ['todo',   'Model Training'],
-            ['todo',   'Validation & mAP Evaluation'],
-            ['todo',   'On-Device Optimisation'],
+            ['done',   'Dataset curation on Roboflow Universe'],
+            ['done',   'Pest Detection model trained (Roboflow 3.0)'],
+            ['done',   'Weed Detection model trained (Roboflow 3.0)'],
+            ['done',   'Plant Disease model trained (Roboflow 3.0)'],
+            ['done',   'Hosted Inference API integrated'],
+            ['done',   'Reanalyze pipeline with purple badge flagging'],
+            ['active', 'Field validation with live rover images'],
           ].map(([s, l]) => `
             <div class="proto-status-badge">
               <span class="dot dot-${s}"></span>${l}
@@ -233,38 +290,57 @@
   function buildSwDashboard() {
     var el = document.getElementById('page-sw-dashboard');
     if (!el) return;
+
+    var screens = [
+      {
+        img: 'assets/images/local_server/chat_ui.png',
+        tag: 'Reaper AI',
+        title: 'Intelligent Farm Advisor',
+        desc: 'A voice-enabled conversational AI powered by Groq\'s LLM API. Reaper speaks fluent Bengali, offering tailored agricultural advice, explaining detected crop diseases, and suggesting localized, field-tested treatments in real time.'
+      },
+      {
+        img: 'assets/images/local_server/map_ui.png',
+        tag: 'Zone Mapping',
+        title: 'Field Health Visualization',
+        desc: 'Monitor the health of different crop zones. The dashboard categorizes areas by severity (High, Medium, Low risk) based on the AI rover\'s latest field patrols, letting farmers instantly see which zones need attention.'
+      },
+      {
+        img: 'assets/images/local_server/history_ui.png',
+        tag: 'Detection History',
+        title: 'Track Anomalies & Reanalyze',
+        desc: 'Review past photos and AI predictions. Filter by date and zone, view exactly what disease or pest was detected, and manually trigger a re-analysis on past images — any updated verdicts are flagged with a purple badge.'
+      },
+      {
+        img: 'assets/images/local_server/farmer_profile_ui.png',
+        tag: 'Environmental Context',
+        title: 'Weather & Risk Assessment',
+        desc: 'Real-time weather forecasts are integrated directly into the farmer profile. Reaper uses this contextual data to proactively alert farmers about upcoming risks — such as irrigation adjustments before expected heavy rainfall.'
+      },
+      {
+        img: 'assets/images/local_server/hive_management.png',
+        tag: 'Fleet Control',
+        title: 'Hive Management',
+        desc: 'Centrally track all active AgriRover units deployed in the field. View operational status, assign patrol zones, and monitor the network connectivity and battery status of the entire rover fleet from one screen.'
+      },
+    ];
+
     el.innerHTML = `
       <div class="page-header">
         <div class="page-eyebrow">Software</div>
         <h1 class="page-title">Control Dashboard</h1>
-        <p class="page-subtitle">Laptop-side UI for live monitoring, field mapping, and rover command dispatch.</p>
+        <p class="page-subtitle">A comprehensive, Bengali-first local web application for monitoring field health, managing rovers, and consulting with our AI agricultural advisor.</p>
       </div>
 
-      <div class="section-block">
-        <h2 class="section-heading">Dashboard Screenshot</h2>
-        <div class="block-diagram-wrap">
-          <img src="assets/images/prototype/dashboard.png" alt="Control Dashboard"
-            onerror="this.outerHTML='<svg viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'currentColor\\' stroke-width=\\'1.5\\'><rect x=\\'2\\' y=\\'3\\' width=\\'20\\' height=\\'14\\' rx=\\'2\\'/><line x1=\\'8\\' y1=\\'21\\' x2=\\'16\\' y2=\\'21\\'/><line x1=\\'12\\' y1=\\'17\\' x2=\\'12\\' y2=\\'21\\'/></svg><span>Dashboard screenshot coming soon</span>'">
-        </div>
-      </div>
-
-      <div class="section-block">
-        <h2 class="section-heading">Features</h2>
-        <div class="dashboard-features">
-          ${[
-            ['📹', 'Live Camera View',    'Real-time MJPEG stream from the rover\'s OV2640 camera with YOLOv8 bounding box overlay drawn on each frame.'],
-            ['🗺️', 'GPS Field Map',       'Interactive field map with GPS-tagged anomaly markers. Colour-coded by type: green (weed), orange (pest), red (disease).'],
-            ['🛣️', 'Route Plan Display',  'Visualises the TSP/VRP optimised treatment route as a path overlay on the field map before the rover executes it.'],
-            ['⚙️', 'Command Panel',       'Manual override buttons for movement (F/B/L/R), blade on/off, and spray on/off via WebSocket commands.'],
-            ['📊', 'Detection Log',       'Timestamped log of all anomalies detected per session with GPS coordinate, class, confidence, and frame thumbnail.'],
-            ['💾', 'Run History',         'SQLite-backed session history. Previous field maps and detection logs are stored and can be replayed or exported.'],
-          ].map(([icon, title, desc]) => `
-            <div class="dash-feature">
-              <div class="dash-feature-icon">${icon}</div>
-              <div class="dash-feature-title">${title}</div>
-              <div class="dash-feature-desc">${desc}</div>
-            </div>`).join('')}
-        </div>
+      <div class="why-grid">
+        ${screens.map(s => `
+          <div class="why-card">
+            <img src="${s.img}" alt="${s.title}" class="why-img" style="object-position: left top;">
+            <div class="why-content">
+              <span class="why-highlight">${s.tag}</span>
+              <h3 class="why-title">${s.title}</h3>
+              <p class="why-desc">${s.desc}</p>
+            </div>
+          </div>`).join('')}
       </div>`;
   }
 

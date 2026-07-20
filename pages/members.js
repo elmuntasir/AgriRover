@@ -35,7 +35,7 @@ var MEMBER1 = {
   id: "2222397",           /* ← update with real student ID */
   pic: "assets/images/members/muntasir.jpg",
   role: "Team Lead · AI & Software · Project Management · Hardware",
-  contribution: "Led overall project architecture, Built AI plant disease detection pipeline, Developed and maintained the project website, Managed team coordination and sprint planning, Integrated hardware with software systems",
+  contribution: "Led overall project architecture, Built the project showcase website, Engineered the 'Reaper' conversational AI using the Groq API to provide real-time farming advice, Trained YOLOv8n models (via Roboflow) for pest-weed and disease detection, Built the end-to-end agricultural AI pipeline integrating YOLOv8 vision models with the Reaper conversational assistant, Built the local server and webapp interface to manage the farm ecosystem including 1. AI conversations 2. Image processing history 3. Rover tracking and 4. Weather-integrated farmer profiles.",
   github: "https://github.com/elmuntasir",
   fb: "https://www.facebook.com/mun.rafin/",
   linkedin: "https://www.linkedin.com/in/munrafin/",
@@ -50,7 +50,7 @@ var MEMBER2 = {
   id: "2230230",           /* ← update with real student ID */
   pic: "assets/images/members/toa.jpg",
   role: "Hardware & Embedded Systems",
-  contribution: "hi hello",
+  contribution: "Designed and assembled the 4WD rover chassis, wired the L298N motor driver and DC motors, integrated the ESP32-WROOM-32 and ESP32-CAM microcontrollers, and mounted the agricultural spray module and cutting blade actuators.",
   github: "https://github.com/tahura98",
   linkedin: "https://www.linkedin.com/in/tahura-anzum-toa-33194826a/",
   rg: "",
@@ -64,7 +64,7 @@ var MEMBER3 = {
   id: "2310001",           /* ← update with real student ID */
   pic: "assets/images/members/noon.jpg",
   role: "AI & Computer Vision Engineer (Software)",
-  contribution: "hi hello",
+  contribution: "Developed the core AI vision pipeline for agricultural analysis, trained the YOLOv8 Roboflow models for weed, pest, and disease detection, curated and annotated the crop image datasets, and optimized the inference endpoints for real-time analysis.",
   github: "https://github.com/Maria-Jahan-Noon?tab=repositories",
   fb: "",
   linkedin: "https://www.linkedin.com/in/maria-jahan-noon-1245b23bb/",

@@ -318,9 +318,9 @@ ul{list-style:none}
   display:grid;grid-template-columns:1fr;gap:24px;margin-bottom:36px;
 }
 .why-card {
-  display:grid;grid-template-columns:360px 1fr;gap:36px;
+  display:grid;grid-template-columns:55% 1fr;gap:28px;
   background:var(--surface);border:1px solid var(--border);
-  border-radius:var(--radius);padding:24px 32px;
+  border-radius:var(--radius);padding:20px 24px;
   transition:transform var(--transition), box-shadow var(--transition);
   align-items:center;
 }
@@ -331,8 +331,9 @@ ul{list-style:none}
   box-shadow:0 16px 40px rgba(0,0,0,0.45);
 }
 .why-img {
-  width:100%;height:320px;object-fit:cover;
+  width:100%;height:auto;max-height:420px;object-fit:contain;object-position:top left;
   border-radius:var(--radius-sm);border:1px solid var(--border);
+  background:var(--bg2);
 }
 .why-content {
   display:flex;flex-direction:column;justify-content:center;
@@ -597,6 +598,12 @@ ul{list-style:none}
       <span class="nav-section-label">Build</span>
       <ul>
         <li class="nav-item">
+          <a class="nav-link" data-page="hw-diagrams" href="#hw-diagrams">
+            <svg class="nav-icon"><use href="#icon-more"/></svg>
+            <span class="nav-label">Sketch and Diagrams</span>
+          </a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" data-page="prototype" href="#prototype">
             <svg class="nav-icon"><use hxref="#icon-tool"/></svg>
             <span class="nav-label">Prototype</span>
@@ -622,7 +629,6 @@ ul{list-style:none}
           </a>
           <ul class="sub-nav">
             <li><a class="sub-nav-link" data-page="hw-components" href="#hw-components">Component List</a></li>
-            <li><a class="sub-nav-link" data-page="hw-diagrams" href="#hw-diagrams">Sketch and Diagrams</a></li>
           </ul>
         </li>
       </ul>
@@ -1014,7 +1020,7 @@ ul{list-style:none}
             <div style="background: var(--primary); color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">2</div>
             <div>
               <h3 style="margin-top: 0; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink);">Edge vs. Server Inference Trade-offs ⚡</h3>
-              <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-light);">What is the trade-off between inference speed (frames per second) and detection accuracy when processing the rover's live video stream on a remote server versus an edge device?</p>
+              <p style="margin-bottom: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ink-light);">What is the trade-off between inference speed and detection accuracy when processing the rover's captured images on a remote server versus an edge device?</p>
             </div>
           </div>
 
@@ -1093,10 +1099,109 @@ ul{list-style:none}
     <section class="page" id="page-lit-m5"><div class="page-header"><div class="page-eyebrow">Literature Review</div><h1 class="page-title">Sumaiya Nasrin</h1></div><div class="abstract-box">Content coming soon.</div></section>
 
 
-    <section class="page" id="page-prototype"><div class="page-header"><div class="page-eyebrow">Build</div><h1 class="page-title">Prototype</h1><p class="page-subtitle">Physical build, chassis, and assembly progress.</p></div><div class="abstract-box">Content coming soon.</div></section>
+    <section class="page" id="page-prototype">
+      <div class="page-header">
+        <div class="page-eyebrow">Build</div>
+        <h1 class="page-title">Prototype</h1>
+        <p class="page-subtitle">Physical build, chassis assembly, and hardware integration of the AgriRover.</p>
+      </div>
+
+      <div class="section-block">
+        <h2 class="section-heading">Build Photos</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:36px">
+          <div style="grid-column:1/-1">
+            <img src="assets/images/prototype/birdview.jpg" alt="AgriRover Bird's Eye View"
+              style="width:100%;height:400px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);">
+            <div style="margin-top:10px;font-family:var(--font-mono);font-size:.72rem;color:var(--muted);text-align:center;">Bird's eye view of the assembled AgriRover chassis</div>
+          </div>
+          <div>
+            <img src="assets/images/prototype/chasis.jpg" alt="AgriRover Chassis"
+              style="width:100%;height:260px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);">
+            <div style="margin-top:8px;font-family:var(--font-mono);font-size:.72rem;color:var(--muted);text-align:center;">4-wheel chassis frame with motor mounts</div>
+          </div>
+          <div>
+            <img src="assets/images/prototype/motors.jpg" alt="Drive Motors"
+              style="width:100%;height:260px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);">
+            <div style="margin-top:8px;font-family:var(--font-mono);font-size:.72rem;color:var(--muted);text-align:center;">DC gear motors and wheel assembly</div>
+          </div>
+          <div style="grid-column:1/-1">
+            <img src="assets/images/prototype/zoom view.jpg" alt="AgriRover Close-Up"
+              style="width:100%;height:340px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);">
+            <div style="margin-top:10px;font-family:var(--font-mono);font-size:.72rem;color:var(--muted);text-align:center;">Close-up view of electronics and sensor mounting</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-block">
+        <h2 class="section-heading">Build Progress</h2>
+        <div class="proto-status-row">
+          <div class="proto-status-badge"><span class="dot dot-done"></span>4WD Chassis Assembly</div>
+          <div class="proto-status-badge"><span class="dot dot-done"></span>Motor & L298N Driver Wiring</div>
+          <div class="proto-status-badge"><span class="dot dot-done"></span>ESP32-WROOM-32 Integration</div>
+          <div class="proto-status-badge"><span class="dot dot-done"></span>ESP32-CAM (OV2640) Mounting</div>
+          <div class="proto-status-badge"><span class="dot dot-done"></span>Power Supply (18650 + Buck Converter)</div>
+          <div class="proto-status-badge"><span class="dot dot-active"></span>Servo & Spray Nozzle Assembly</div>
+          <div class="proto-status-badge"><span class="dot dot-todo"></span>Ultrasonic Sensor Integration</div>
+          <div class="proto-status-badge"><span class="dot dot-todo"></span>Full Field Test</div>
+        </div>
+      </div>
+    </section>
     <section class="page" id="page-sw-overview"><div class="page-header"><div class="page-eyebrow">Software</div><h1 class="page-title">Software Overview</h1></div><div class="abstract-box">Content coming soon.</div></section>
     <section class="page" id="page-sw-ai"><div class="page-header"><div class="page-eyebrow">Software</div><h1 class="page-title">AI Model</h1><p class="page-subtitle">YOLOv8 training, dataset, and detection pipeline.</p></div><div class="abstract-box">Content coming soon.</div></section>
-    <section class="page" id="page-sw-dashboard"><div class="page-header"><div class="page-eyebrow">Software</div><h1 class="page-title">Control Dashboard</h1></div><div class="abstract-box">Content coming soon.</div></section>
+    <section class="page" id="page-sw-dashboard">
+      <div class="page-header">
+        <div class="page-eyebrow">Software</div>
+        <h1 class="page-title">Control Dashboard</h1>
+        <p class="page-subtitle">A comprehensive, Bengali-first local web application for monitoring field health, managing rovers, and consulting with our AI agricultural advisor.</p>
+      </div>
+      
+      <div class="why-grid">
+        <div class="why-card">
+          <img src="assets/images/local_server/map_ui.png" alt="Field Map" class="why-img" style="object-position: left top;">
+          <div class="why-content">
+            <span class="why-highlight">Zone Mapping</span>
+            <h3 class="why-title">Field Health Visualization</h3>
+            <p class="why-desc">Monitor the real-time health of different crop zones. The dashboard categorizes areas by severity (High, Medium, Low risk) based on the AI rover's latest field patrols.</p>
+          </div>
+        </div>
+        
+        <div class="why-card">
+          <img src="assets/images/local_server/history_ui.png" alt="History" class="why-img" style="object-position: left top;">
+          <div class="why-content">
+            <span class="why-highlight">Detection History</span>
+            <h3 class="why-title">Track Anomalies & Reanalyze</h3>
+            <p class="why-desc">Review past photos and AI predictions. The history tab allows farmers to filter by date and zone, view the exact disease detected, and manually trigger a re-analysis on past images if the model gets updated.</p>
+          </div>
+        </div>
+        
+        <div class="why-card">
+          <img src="assets/images/local_server/chat_ui.png" alt="Reaper AI Chat" class="why-img" style="object-position: left top;">
+          <div class="why-content">
+            <span class="why-highlight">Reaper AI</span>
+            <h3 class="why-title">Intelligent Farm Advisor</h3>
+            <p class="why-desc">A voice-enabled conversational AI built with Groq. Reaper speaks fluent Bengali, offering tailored agricultural advice, explaining detected crop diseases, and suggesting localized treatments.</p>
+          </div>
+        </div>
+        
+        <div class="why-card">
+          <img src="assets/images/local_server/farmer_profile_ui.png" alt="Farmer Profile" class="why-img" style="object-position: left top;">
+          <div class="why-content">
+            <span class="why-highlight">Environmental Context</span>
+            <h3 class="why-title">Weather & Risk Assessment</h3>
+            <p class="why-desc">Integrates real-time weather forecasts directly into the dashboard. Reaper uses this data to alert the farmer about upcoming weather risks, like adjusting irrigation before heavy rainfall.</p>
+          </div>
+        </div>
+        
+        <div class="why-card">
+          <img src="assets/images/local_server/hive_management.png" alt="Hive Management" class="why-img" style="object-position: left top;">
+          <div class="why-content">
+            <span class="why-highlight">Fleet Control</span>
+            <h3 class="why-title">Hive Management</h3>
+            <p class="why-desc">Centrally track all active AgriRover units in the field. View operational status, assign tasks, and monitor network connectivity for the entire fleet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="page" id="page-hw-components"></section>
     <section class="page" id="page-hw-diagrams">
       <div class="page-header">

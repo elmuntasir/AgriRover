@@ -258,6 +258,18 @@
 }
 
 /* Info column */
+.member-info-col {
+  width: 100%;
+  max-width: 380px;
+}
+
+.member-card.flip .member-info-col {
+  justify-self: end;
+}
+.member-card:not(.flip) .member-info-col {
+  justify-self: start;
+}
+
 .member-index-label {
   font-family: var(--font-mono);
   font-size: 0.58rem;
