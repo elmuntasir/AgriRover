@@ -2067,49 +2067,43 @@
                   pests like aphids. The model analyzes visual data and places bounding boxes around detected bugs. This
                   phase validates the model's accuracy and inference speed.</p>
               </div>
-              <div style="margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                <div>
-                  <img src="assets/images/image_processing/aphid_detection.png" alt="Aphid Detection History"
-                    style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+              <div style="margin-top: 20px; display: grid; grid-template-columns: 1fr 220px; gap: 20px; align-items: start;">
+
+                <!-- Left: Phase 1 + Phase 2 stacked -->
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                  <div>
+                    <img src="assets/images/image_processing/aphid_detection.png" alt="Aphid Detection History"
+                      style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                  </div>
+                  <div>
+                    <div style="font-size: 0.78rem; font-weight: 600; color: var(--ink2); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px;">Phase 2: Infestation Mapping</div>
+                    <img src="assets/images/image_processing/aphid_detection_map.png" alt="Aphid Detection Map"
+                      style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                    <p style="margin-top: 10px; font-size: 0.85rem; color: var(--ink2); line-height: 1.5;">Detection data is paired with GPS coordinates to generate a field map, enabling targeted spot-spraying.</p>
+                  </div>
                 </div>
-                <div style="aspect-ratio: 16/9; position: relative;">
-                  <a href="#" target="_blank" style="display: block; width: 100%; height: 100%; text-decoration: none;">
-                    <div class="img-placeholder" style="width: 100%; height: 100%; border-radius: var(--radius-sm);">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                        style="width: 32px; height: 32px;">
-                        <use href="#icon-video" />
-                      </svg>
-                      <span>Insert YouTube Video Link Here</span>
-                    </div>
+
+                <!-- Right: 9:16 portrait video -->
+                <div style="aspect-ratio: 9/16; position: relative; width: 100%;">
+                  <a href="https://www.youtube.com/shorts/zkcAgoQejC4" target="_blank"
+                    style="display: block; width: 100%; height: 100%;">
+                    <img src="https://img.youtube.com/vi/zkcAgoQejC4/maxresdefault.jpg"
+                      alt="Phase 1: Pest Detection Model Demo"
+                      style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid var(--border);">
                     <div
-                      style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.7); border-radius: 50%; padding: 15px; display: flex; align-items: center; justify-content: center; transition: background 0.3s;">
-                      <svg viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" width="32" height="32"
-                        style="margin-left: 4px;">
+                      style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.7); border-radius: 50%; padding: 12px; display: flex; align-items: center; justify-content: center; transition: background 0.3s;">
+                      <svg viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" width="24" height="24"
+                        style="margin-left: 3px;">
                         <polygon points="5 3 19 12 5 21 5 3"></polygon>
                       </svg>
                     </div>
                   </a>
                 </div>
+
               </div>
             </div>
 
-            <div class="timeline-card">
-              <div class="timeline-card-header">
-                <div class="timeline-title">Phase 2: Infestation Mapping</div>
-                <div class="timeline-badge badge-completed">Completed</div>
-              </div>
-              <div class="timeline-desc">
-                <p>In the second phase, the detection data is paired with location coordinates to generate a
-                  comprehensive field map. This map visually indicates the exact spots where aphid infestations were
-                  detected, allowing for optimized route planning and targeted spot-spraying.</p>
-              </div>
-              <div style="margin-top: 20px;">
-                <div>
-                  <img src="assets/images/image_processing/aphid_detection_map.png" alt="Aphid Detection Map"
-                    style="width: 100%; max-width: 600px; border-radius: var(--radius-sm); border: 1px solid var(--border);">
-                </div>
-              </div>
-            </div>
+
             <div class="timeline-card">
               <div class="timeline-card-header">
                 <div class="timeline-title">Phase 3: On-Rover Integration</div>
@@ -2333,9 +2327,11 @@
           <div class="page-eyebrow">Research</div>
           <h1 class="page-title">Similar Preexisting Projects</h1>
         </div>
-        
+
         <div class="similar-projects-intro">
-          The following table classifies the previously discussed market-leading agricultural robots as 'Professional Service Robots' (according to International Federation of Robotics standards) and highlights how their service features align with our proposed Agricultural Service Robot:
+          The following table classifies the previously discussed market-leading agricultural robots as 'Professional
+          Service Robots' (according to International Federation of Robotics standards) and highlights how their service
+          features align with our proposed Agricultural Service Robot:
         </div>
 
         <!-- Table 1 (Noon) -->
@@ -2354,7 +2350,8 @@
               <tr>
                 <td>
                   <div class="robo-cell">
-                    <div class="robo-img-wrap"><img src="assets/similar_robo/NIQO ROBOTICS.png" alt="Niqo Robotics"></div>
+                    <div class="robo-img-wrap"><img src="assets/similar_robo/NIQO ROBOTICS.png" alt="Niqo Robotics">
+                    </div>
                     <span class="robo-name">Niqo Robotics</span>
                   </div>
                 </td>
@@ -2373,7 +2370,8 @@
               <tr>
                 <td>
                   <div class="robo-cell">
-                    <div class="robo-img-wrap"><img src="assets/similar_robo/FARMDROID FD20.png" alt="FarmDroid FD20"></div>
+                    <div class="robo-img-wrap"><img src="assets/similar_robo/FARMDROID FD20.png" alt="FarmDroid FD20">
+                    </div>
                     <span class="robo-name">FarmDroid FD20</span>
                   </div>
                 </td>
@@ -2392,7 +2390,8 @@
               <tr>
                 <td>
                   <div class="robo-cell">
-                    <div class="robo-img-wrap"><img src="assets/similar_robo/CARBON ROBOTICS LASERWEEDER.png" alt="Carbon Robotics LaserWeeder"></div>
+                    <div class="robo-img-wrap"><img src="assets/similar_robo/CARBON ROBOTICS LASERWEEDER.png"
+                        alt="Carbon Robotics LaserWeeder"></div>
                     <span class="robo-name">Carbon Robotics LaserWeeder</span>
                   </div>
                 </td>
@@ -2411,7 +2410,8 @@
               <tr>
                 <td>
                   <div class="robo-cell">
-                    <div class="robo-img-wrap"><img src="assets/similar_robo/OPENWEEDLOCATOR (OWL) -e.png" alt="OpenWeedLocator (OWL)"></div>
+                    <div class="robo-img-wrap"><img src="assets/similar_robo/OPENWEEDLOCATOR (OWL) -e.png"
+                        alt="OpenWeedLocator (OWL)"></div>
                     <span class="robo-name">OpenWeedLocator (OWL)</span>
                   </div>
                 </td>
@@ -2430,7 +2430,8 @@
               <tr>
                 <td>
                   <div class="robo-cell">
-                    <div class="robo-img-wrap"><img src="assets/similar_robo/GREENFIELD ROBOTICS BOTONY.png" alt="Greenfield Robotics BOTONY"></div>
+                    <div class="robo-img-wrap"><img src="assets/similar_robo/GREENFIELD ROBOTICS BOTONY.png"
+                        alt="Greenfield Robotics BOTONY"></div>
                     <span class="robo-name">Greenfield Robotics BOTONY</span>
                   </div>
                 </td>
@@ -2455,7 +2456,8 @@
           <table class="similar-table">
             <thead>
               <tr>
-                <th>Robot Name<br><span style="font-size:0.75rem; font-weight:normal; opacity:0.8">(Market Year)</span></th>
+                <th>Robot Name<br><span style="font-size:0.75rem; font-weight:normal; opacity:0.8">(Market Year)</span>
+                </th>
                 <th>Service Robot Type</th>
                 <th>Key Service Features</th>
                 <th>Similarities to AgroRover</th>
@@ -2466,12 +2468,14 @@
               <tr>
                 <td>
                   <div class="robo-cell">
-                    <div class="robo-img-wrap"><img src="assets/similar_robo/See & Spray by John Deere.jpg" alt="See & Spray"></div>
+                    <div class="robo-img-wrap"><img src="assets/similar_robo/See & Spray by John Deere.jpg"
+                        alt="See & Spray"></div>
                     <span class="robo-name">See & Spray</span>
                     <span class="robo-year">(John Deere, 2021)</span>
                   </div>
                 </td>
-                <td>Professional Service Robot<br><span style="color:var(--muted); font-size:0.85em">(Crop Protection & Management)</span></td>
+                <td>Professional Service Robot<br><span style="color:var(--muted); font-size:0.85em">(Crop Protection &
+                    Management)</span></td>
                 <td>
                   <ul>
                     <li>High-resolution camera vision</li>
@@ -2490,12 +2494,14 @@
               <tr>
                 <td>
                   <div class="robo-cell">
-                    <div class="robo-img-wrap"><img src="assets/images/agrirover.png" style="opacity: 0" alt=""></div> <!-- Placeholder since ARA image is missing in assets -->
+                    <div class="robo-img-wrap"><img src="assets/images/agrirover.png" style="opacity: 0" alt=""></div>
+                    <!-- Placeholder since ARA image is missing in assets -->
                     <span class="robo-name">ARA</span>
                     <span class="robo-year">(Ecorobotix, 2021)</span>
                   </div>
                 </td>
-                <td>Professional Service Robot<br><span style="color:var(--muted); font-size:0.85em">(Precision Smart Sprayer)</span></td>
+                <td>Professional Service Robot<br><span style="color:var(--muted); font-size:0.85em">(Precision Smart
+                    Sprayer)</span></td>
                 <td>
                   <ul>
                     <li>GPS & sensor-guided navigation</li>
@@ -2514,12 +2520,14 @@
               <tr>
                 <td>
                   <div class="robo-cell">
-                    <div class="robo-img-wrap"><img src="assets/similar_robo/LaserWeeder by carbonrobotics.jpg" alt="LaserWeeder"></div>
+                    <div class="robo-img-wrap"><img src="assets/similar_robo/LaserWeeder by carbonrobotics.jpg"
+                        alt="LaserWeeder"></div>
                     <span class="robo-name">LaserWeeder</span>
                     <span class="robo-year">(Carbon Robotics, 2022)</span>
                   </div>
                 </td>
-                <td>Professional Service Robot<br><span style="color:var(--muted); font-size:0.85em">(Weed Control & Eradication)</span></td>
+                <td>Professional Service Robot<br><span style="color:var(--muted); font-size:0.85em">(Weed Control &
+                    Eradication)</span></td>
                 <td>
                   <ul>
                     <li>High-speed AI-driven image processing</li>
@@ -2529,7 +2537,8 @@
                 </td>
                 <td>
                   <ul>
-                    <li>Camera & central processor-based automated detection method (similar to Agrorovers ESP32 CAM + server system)</li>
+                    <li>Camera & central processor-based automated detection method (similar to Agrorovers ESP32 CAM +
+                      server system)</li>
                   </ul>
                 </td>
                 <td><a href="https://www.carbonrobotics.com" target="_blank">www.carbonrobotics.com</a></td>
@@ -2542,7 +2551,8 @@
                     <span class="robo-year">(Solinftec, 2023)</span>
                   </div>
                 </td>
-                <td>Professional Service Robot<br><span style="color:var(--muted); font-size:0.85em">(Autonomous Field Scouting & Monitoring)</span></td>
+                <td>Professional Service Robot<br><span style="color:var(--muted); font-size:0.85em">(Autonomous Field
+                    Scouting & Monitoring)</span></td>
                 <td>
                   <ul>
                     <li>Fully solar-powered</li>
